@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="direita"></div>
+    <div id="esquerda">
+      <div id="login_box">
+        <h1>OLÁ DEV!</h1>
+        <form id="box" method="POST" action="/login">
+          <div id="login" class="campos">
+            <input
+              type="text"
+              name="nome"
+              id="nome_login"
+              placeholder="Usuário"
+              required
+            />
+          </div>
+          <div id="senha" class="campos">
+            <input
+              type="password"
+              name="senha"
+              id="senha_login"
+              placeholder="Senha"
+              required
+            />
+            <div id="baixo_senha">
+              <small> <a href="">Esqueci minha senha.</a></small>
+              <div id="esqueci">
+                <input type="checkbox" name="Lembrar" id="lembrar" />
+                <small>Lembre-se de mim.</small>
+              </div>
+            </div>
+          </div>
+          <div id="botao">
+            <button type="submit" id="butao">Entrar</button>
+            <p id="cadastre">
+              Não tem conta? <a href="./cadastro">Cadastre-se!</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
