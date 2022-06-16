@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: 0%;
 }
 
 body {
@@ -47,7 +47,7 @@ button:hover {
 #esquerda {
   height: 100vh;
   width: 70vw;
-  background-image: url("../img/catgod.gif");
+  background-image: url("../img/background_login.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
