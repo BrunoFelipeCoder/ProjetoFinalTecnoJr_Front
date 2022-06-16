@@ -1,57 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: 0;
 }
 
 body {
   display: flex;
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
+  font-size: 60px;
   color: #d975ff;
-  font-style: italic;
   font-weight: bolder;
-  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.438);
+  text-shadow: 1px 1px 2px #000000;
 }
-*/
 
-/*input {
-    background-color: #700b97;
-    height: 10px;
-    width: 250px;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 15px;
-  }*/
-
-input:focus {
-  background-color: #773bc6;
+a {
   text-decoration: none;
+  color: #d975ff;
 }
 
-#direita {
-  height: 619px;
-  width: 826px;
-  /*background-image: url(../img/cropado.gif);
-  background-repeat: no-repeat;*/
-  background-image: url(../img/catgod.gif);
+button {
+  margin-top: 30px;
+  height: 20px;
+  width: 250px;
+  padding: 20px 15px;
+  background-color: #8e05c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font: 30px bolder;
+  color: #d975ff;
+  border: none;
+  -webkit-box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #esquerda {
-  height: 619px;
-  width: 500px;
+  height: 100vh;
+  width: 70vw;
+  background-image: url("../img/catgod.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#direita {
+  height: 100vh;
+  width: 30vw;
   background-color: #371f56;
+  justify-content: center;
+  align-items: center;
 }
 
 #login_box {
-  display: flex;
-  height: 619px;
-  width: 500px;
+  height: 100vh;
+  width: 30vw;
+  background-color: black;
   border-radius: 15px 0 0 15px;
-  justify-content: center;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -71,58 +87,42 @@ input:focus {
   animation: transicao 10s linear infinite;
 }
 
-#box {
+#inputs {
   display: flex;
   flex-direction: column;
-  height: 344px;
-  width: 327px;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  gap: 30px;
+  margin-left: -8%;
 }
 
-#nome_login {
+.input {
   background-color: #700b97;
-  height: 10px;
-  width: 250px;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 15px;
+  border: none;
+  padding: 5px 0px;
+  border-radius: 10px;
 }
 
-#senha_login {
-  background-color: #700b97;
-  height: 10px;
-  width: 250px;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 15px;
-}
-
-#senha {
-  align-items: center;
-  justify-content: center;
-}
-
-#baixo_senha {
+#icone {
+  width: 100%;
+  height: 100%;
   display: flex;
-  margin-top: 8px;
-  justify-content: space-between;
-  color: #d975ff;
-  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  color: #d9bcbc;
+}
+
+.espaco {
+  background-color: #700b97;
+  height: 6vh;
+  width: 120%;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 10px;
 }
 
 #esqueci {
-  display: flex;
-  gap: 5px;
-}
-
-#lembrar {
-  margin: 0;
-  padding: 0;
-  height: 15px;
-  width: 15px;
-  border-radius: 4px;
+  font-size: 13px;
+  margin-top: -14%;
+  margin-left: 24%;
 }
 
 #botao {
@@ -130,66 +130,8 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  color: #d975ff;
-}
-
-#butao {
-  margin-top: 30px;
-  height: 20px;
-  width: 250px;
-  padding: 20px 15px;
-  background-color: #8e05c2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  font: 30px bolder;
-  color: #d975ff;
-  border: none;
-  -webkit-box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
-}
-
-a {
-  text-decoration: none;
-  color: #d975ff;
-  font-weight: bolder;
-}
-
-/*body {
-  display: flex;
-}
-
-#direita {
-  background-image: url("../img/catgod.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 70%;
-  height: 100vh;
-}
-
-#esquerda {
-  background-color: #371f56;
-  width: 30%;
-  height: 100vh;
-}
-
-#login_box {
-  height: 80%;
-  width: 70%;
-  background-color: black;
-}
-*/
-@media (max-width: 1000px) {
-  #direita {
-    display: none;
-  }
-
-  #esquerda {
-    width: 100%;
-  }
+  gap: 8px;
+  color: #d9bcbc;
 }
 
 @keyframes transicao {

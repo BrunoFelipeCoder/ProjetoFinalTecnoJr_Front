@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt_BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
-      rel="stylesheet"
-    />
+    <script
+      src="https://kit.fontawesome.com/048239d8b6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/login.css" />
-    <title>Login</title>
+    <title>Login | Olá Dev!</title>
   </head>
   <body>
-    <div id="direita"></div>
-    <div id="esquerda">
-      <div id="login_box">
-        <h1>OLÁ DEV!</h1>
-        <form id="box" method="POST" action="/login">
-          <div id="login" class="campos">
+    <div id="esquerda"></div>
+    <div id="direita">
+      <form action="" id="login_box">
+        <h1>Olá Dev!</h1>
+        <div id="inputs">
+          <div class="espaco">
+            <div id="icone">
+              <i class="fa-solid fa-user"></i>
+            </div>
             <input
               type="text"
-              name="nome"
-              id="nome_login"
-              placeholder="Usuário"
+              class="input"
+              placeholder="Nome de Usuário"
+              name="nameuser"
               required
             />
           </div>
-          <div id="senha" class="campos">
+          <div class="espaco">
+            <div id="icone">
+              <i class="fa-solid fa-lock"></i>
+            </div>
             <input
               type="password"
-              name="senha"
-              id="senha_login"
+              class="input"
               placeholder="Senha"
+              name="senha"
               required
             />
-            <div id="baixo_senha">
-              <small> <a href="">Esqueci minha senha.</a></small>
-              <div id="esqueci">
-                <input type="checkbox" name="Lembrar" id="lembrar" />
-                <small>Lembre-se de mim.</small>
-              </div>
-            </div>
           </div>
-          <div id="botao">
-            <button type="submit" id="butao">Entrar</button>
-            <p id="cadastre">
-              Não tem conta? <a href="./cadastro">Cadastre-se!</a>
-            </p>
+          <a id="esqueci">Esqueci minha senha.</a>
+        </div>
+        <!--<div id="opcoes">
+          <div id="lembrar">
+            <input type="checkbox" name="" id="lembrarse" />
+            <a>Lembre-se de mim.</a>
           </div>
-        </form>
-      </div>
+        </div>-->
+        <div id="botao">
+          <button type="submit">Entrar</button>
+          <small>Não tem conta? <a href="">Cadastre-se!</a></small>
+        </div>
+      </form>
     </div>
   </body>
 </html>
