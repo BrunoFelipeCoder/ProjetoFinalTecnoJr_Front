@@ -23,6 +23,10 @@ a {
   color: #d975ff;
 }
 
+input::placeholder {
+  color: whitesmoke;
+}
+
 button {
   margin-top: 30px;
   height: 20px;
