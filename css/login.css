@@ -13,45 +13,47 @@ body {
 
 h1 {
   font-size: 60px;
-  color: #d975ff;
+  color: #ffffff;
   font-weight: bolder;
   text-shadow: 1px 1px 2px #000000;
 }
 
 a {
   text-decoration: none;
-  color: #d975ff;
+  color: rgb(191, 148, 255)
 }
 
 input::placeholder {
-  color: whitesmoke;
+  color: rgba(245, 245, 245, 0.342);
 }
 
 button {
   margin-top: 30px;
   height: 20px;
-  width: 250px;
-  padding: 20px 15px;
+  width: 100%;
+  padding: 25px;
   background-color: #8e05c2;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   font: 30px bolder;
-  color: #d975ff;
+  color: #efc7ff;
   border: none;
   -webkit-box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
 }
 
 button:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 #esquerda {
   height: 100vh;
   width: 70vw;
-  background-image: url("../img/background_login.gif");
+  background-image: url("../img/programadora.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -85,7 +87,7 @@ button:hover {
   height: 200%;
   z-index: -1;
   position: absolute;
-  background: linear-gradient(to right, #700b97 0%, #ab2bdc 50%, #700b97 100%);
+  background: linear-gradient(to right, #37064b 0%, #610b83 50%, #37064b 100%);
   transform: rotateZ(135deg);
   background-size: 200%;
   animation: transicao 10s linear infinite;
@@ -96,13 +98,15 @@ button:hover {
   flex-direction: column;
   gap: 30px;
   margin-left: -8%;
+  
 }
 
 .input {
   background-color: #700b97;
   border: none;
-  padding: 5px 0px;
+  padding: 5px 10px;
   border-radius: 10px;
+  color: white;
 }
 
 #icone {
@@ -126,7 +130,7 @@ button:hover {
 #esqueci {
   font-size: 13px;
   margin-top: -14%;
-  margin-left: 24%;
+  margin-left: 5%;
 }
 
 #botao {
@@ -146,4 +150,8 @@ button:hover {
   100% {
     background-position: 100% 100%;
   }
+}
+
+a:hover{
+  text-decoration: underline;
 }
