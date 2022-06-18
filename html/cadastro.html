@@ -6,68 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/cadastro.css" />
     <title>Cadastro | Olá Dev!</title>
+    <script
+      src="https://kit.fontawesome.com/048239d8b6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="backgroundCadastro">
       <form action="" id="cadastro" onsubmit="mostrar(event)">
-          <h1>Cadastre-se</h1>
-          <p>Preencha os seguintes dados para criar sua conta:</p>
-          <label for="">Nome: </label>
-          <input
-            type="text"
-            name="nome"
-            placeholder="Informe seu nome..."
-            id="nome"
-            required
-            class="form"
-          />
-          <label for="">Data de Nascimento: </label>
-          <input
-            type="date"
-            name="dataNasc"
-            placeholder="Informe a sua data de nascimento..."
-            id="dataNasc"
-            required
-            class="form"
-          />
-          <label for="">E-Mail: </label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Informe o seu E-Mail..."
-            id="email"
-            required
-            class="form"
-          />
-          <label for="">Nome de Usuário: </label>
-          <input
-            type="text"
-            name="nome_usuario"
-            placeholder="Informe seu Nome de Usuário..."
-            id="nome_usuario"
-            required
-            class="form"
-          />
-          <label for="">Senha: </label>
-          <input
-            type="password"
-            name="senha"
-            placeholder="Informe sua Senha..."
-            id="senha"
-            required
-            class="form"
-          />
-          <label for="">Confirmação de Senha: </label>
-          <input
-            type="password"
-            name="confirm_Senha"
-            placeholder="Confirme sua Senha..."
-            id="confirmar_senha"
-            required
-            class="form"
-          />
-          <button type="submit">Cadastrar</button>
-          <a id="voltar" href="/html/login.html">Voltar</a>
+        <h1>Cadastre-se</h1>
+        <p>Preencha os seguintes dados para criar sua conta:</p>
+        <label for="">Nome: </label>
+        <div id="nomeEspaco" class="espaco">
+        <div id="icone" class="icone">
+          <i class="fa-solid fa-at"></i>
+        </div>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Informe seu nome..."
+          id="nome"
+          required
+          class="form"
+        />
+      </div>
+        <label for="">Data de Nascimento: </label>
+        <input
+          type="date"
+          name="dataNasc"
+          id="dataNasc"
+          required
+          class="form"
+        />
+        <label for="">E-Mail: </label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Informe o seu E-Mail..."
+          id="email"
+          required
+          class="form"
+        />
+        <label for="">Nome de Usuário: </label>
+        <input
+          type="text"
+          name="nome_usuario"
+          placeholder="Informe seu Nome de Usuário..."
+          id="nome_usuario"
+          required
+          class="form"
+        />
+        <label for="">Senha: </label>
+        <input
+          type="password"
+          name="senha"
+          placeholder="Informe sua Senha..."
+          id="senha"
+          required
+          class="form"
+        />
+        <label for="">Confirmação de Senha: </label>
+        <input
+          type="password"
+          name="confirm_Senha"
+          placeholder="Confirme sua Senha..."
+          id="confirmar_senha"
+          required
+          class="form"
+        />
+        <button type="submit">Cadastrar</button>
+        <a id="voltar" href="/html/login.html">Voltar</a>
       </form>
     </div>
     <script src="../js/cadastro.js"></script>
