@@ -22,6 +22,9 @@ a {
   text-decoration: none;
   color: rgb(191, 148, 255);
 }
+small{
+  color: rgb(228, 214, 250);
+}
 
 input::placeholder {
   color: rgba(245, 245, 245, 0.342);
@@ -62,7 +65,7 @@ button:hover {
 #direita {
   height: 100vh;
   width: 30vw;
-  background-color: #371f56;
+  background-color: rgb(50, 28, 96);
   justify-content: center;
   align-items: center;
 }
@@ -70,7 +73,6 @@ button:hover {
 #login_box {
   height: 100vh;
   width: 30vw;
-  background-color: black;
   border-radius: 15px 0 0 15px;
   display: flex;
   justify-content: space-evenly;
@@ -134,13 +136,8 @@ button:hover {
   margin-left: 1%;
 }
 
-#botao {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  color: #d9bcbc;
+a:hover {
+  text-decoration: underline;
 }
 
 @keyframes transicao {
@@ -151,8 +148,4 @@ button:hover {
   100% {
     background-position: 100% 100%;
   }
-}
-
-a:hover {
-  text-decoration: underline;
 }
