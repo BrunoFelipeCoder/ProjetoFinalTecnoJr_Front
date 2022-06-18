@@ -20,7 +20,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: rgb(191, 148, 255)
+  color: rgb(191, 148, 255);
 }
 
 input::placeholder {
@@ -97,8 +97,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: -8%;
-  
+  width: max-content;
+  margin-left: -24%;
 }
 
 .input {
@@ -107,10 +107,11 @@ button:hover {
   padding: 5px 10px;
   border-radius: 10px;
   color: white;
+  width: 80%;
 }
 
 #icone {
-  width: 100%;
+  width: 15%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -121,16 +122,16 @@ button:hover {
 .espaco {
   background-color: #700b97;
   height: 6vh;
-  width: 120%;
+  width: 150%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-radius: 10px;
 }
 
 #esqueci {
   font-size: 13px;
-  margin-top: -14%;
-  margin-left: 5%;
+  margin-top: -11%;
+  margin-left: 1%;
 }
 
 #botao {
@@ -152,6 +153,6 @@ button:hover {
   }
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }
