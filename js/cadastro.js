@@ -55,7 +55,7 @@ function cadastro(event) {
     event.preventDefault();
     return false;
   }
-  const url = "http://localhost:3000/auth/cadastro";
+  const url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
   cadastrarUsuario(url, user);
   alert("Usuário Cadastrado com sucesso!");
   return window.location.replace("http://127.0.0.1:5500/html/login.html");
