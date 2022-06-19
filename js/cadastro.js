@@ -57,5 +57,6 @@ function cadastro(event) {
   }
   const url = "http://localhost:3000/auth/cadastro";
   cadastrarUsuario(url, user);
-  return alert("Usuário Cadastrado com sucesso!");
+  alert("Usuário Cadastrado com sucesso!");
+  return window.location.replace("http://127.0.0.1:5500/html/login.html");
 }
