@@ -22,7 +22,7 @@ function cadastrarUsuario(user) {
   //após ter enviado o arquivo, usamos o onload para saber a resposta do servidor
   request.onload = () => {
     alert(request.response);
-    if (request.status !== 200) {
+    if (request.status != 200) {
       return false;
     }
     return true;
@@ -78,4 +78,13 @@ function cadastro(event) {
   }
   location.reload();
   return true;
+}
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const token = urlParams.get("token");
+if (token) {
+  console.log(token);
+} else {
+  console.log("falta verificar email");
 }
