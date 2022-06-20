@@ -9,8 +9,8 @@ const confirmar_senha = document.getElementById("confirmar_senha");
 //Função para cadastrar o usuário no Banco de Dados
 function cadastrarUsuario(user) {
   //url do caminho da API para adicionar o usuário no BD
-  //const url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
-  const url = "http://localhost:3000/auth/cadastro";
+  const url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
+  //const url = "http://localhost:3000/auth/cadastro";
   //Criando uma instancia do objeto XMLHttpRequest que serve parar facilitar o envio e obtenção de dados do servidor sem que precise recarregar toda a pagina
   let request = new XMLHttpRequest();
   //Abrindo a requisição tendo como parâmetros o método que vai ser usado e o endereço do servidor (ambos obrigatórios) além de informar se vai ser uma operação assíncrona(true) ou síncrona(false), essa por sua vez é optativa
