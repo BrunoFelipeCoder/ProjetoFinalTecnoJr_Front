@@ -2,8 +2,8 @@ const email = document.getElementById("email");
 const codigo = document.getElementById("codigo");
 function mandaremail(event) {
   event.preventDefault();
-  const url = "http://localhost:3000/auth/confirmar_email";
-  //const url = "https://ola-dev-backend.herokuapp.com/auth/confirmar_email";
+  //const url = "http://localhost:3000/auth/confirmar_email";
+  const url = "https://ola-dev-backend.herokuapp.com/auth/confirmar_email";
   const mail = {
     email: email.value,
   };
