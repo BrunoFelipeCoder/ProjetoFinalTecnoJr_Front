@@ -14,67 +14,94 @@
   <body>
     <div id="backgroundCadastro">
       <form action="" id="cadastro" onsubmit="mostrar(event)">
-        <h1>Cadastre-se</h1>
+        <h1>Cadastro</h1>
+
         <p>Preencha os seguintes dados para criar sua conta:</p>
+
         <label for="">Nome: </label>
         <div id="nomeEspaco" class="espaco">
-        <div id="icone" class="icone">
-          <i class="fa-solid fa-at"></i>
+          <div id="icone1" class="icone">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Nome Completo"
+            required
+            class="form"
+          />
         </div>
-        <input
-          type="text"
-          name="nome"
-          placeholder="Informe seu nome..."
-          id="nome"
-          required
-          class="form"
-        />
-      </div>
-        <label for="">Data de Nascimento: </label>
-        <input
-          type="date"
-          name="dataNasc"
-          id="dataNasc"
-          required
-          class="form"
-        />
+        <label for="">Data: </label>
+        <div id="dataEspaco" class="espaco">
+          <div id="icone2" class="icone">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <input
+            type="date"
+            name="dataNasc"
+            id="dataNasc"
+            required
+            class="form"
+          />
+        </div>
         <label for="">E-Mail: </label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Informe o seu E-Mail..."
-          id="email"
-          required
-          class="form"
-        />
+        <div id="dataEspaco" class="espaco">
+          <div id="icone3" class="icone">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+            required
+            class="form"
+          />
+        </div>
         <label for="">Nome de Usuário: </label>
-        <input
-          type="text"
-          name="nome_usuario"
-          placeholder="Informe seu Nome de Usuário..."
-          id="nome_usuario"
-          required
-          class="form"
-        />
+        <div id="dataEspaco" class="espaco">
+          <div id="icone4" class="icone">
+            <i class="fa-solid fa-at"></i>
+          </div>
+          <input
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Usuário"
+            required
+            class="form"
+          />
+        </div>
         <label for="">Senha: </label>
-        <input
-          type="password"
-          name="senha"
-          placeholder="Informe sua Senha..."
-          id="senha"
-          required
-          class="form"
-        />
+        <div id="dataEspaco" class="espaco">
+          <div id="icone5" class="icone">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Senha"
+            required
+            class="form"
+          />
+        </div>
         <label for="">Confirmação de Senha: </label>
-        <input
-          type="password"
-          name="confirm_Senha"
-          placeholder="Confirme sua Senha..."
-          id="confirmar_senha"
-          required
-          class="form"
-        />
-        <button type="submit">Cadastrar</button>
+        <div id="dataEspaco" class="espaco">
+          <div id="icone6" class="icone">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <input
+            type="password"
+            name="senha2"
+            id="senha2"
+            placeholder="Confirme a Senha"
+            required
+            class="form"
+          />
+        </div>
+        <button type="submit">Finalizar</button>
         <a id="voltar" href="/html/login.html">Voltar</a>
       </form>
     </div>

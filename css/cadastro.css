@@ -19,12 +19,15 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
+  background-image: url("../img/programadora.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #cadastro {
   height: 90vh;
   width: 40vw;
-  background-color: rgb(247, 196, 196);
   border-radius: 15px;
   padding: 15px;
   display: flex;
@@ -35,6 +38,7 @@ body {
   z-index: 2;
   overflow: hidden;
   box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
+  opacity: 92%;
 }
 
 #cadastro::before {
@@ -52,6 +56,7 @@ body {
 label{
   padding-left: 10px;
   color: aliceblue;
+  opacity: 0;
 }
 
 .form{
@@ -89,16 +94,11 @@ button:hover {
   opacity: 1;
 }
 
-label{
-  margin-left: 3%;
-  border-bottom: #f5f5f5 ;
-}
-
-h1{
-  padding: 15px;
-  color: rgb(255, 255, 255);
-  text-align: center;
+h1 {
   font-size: 40px;
+  color: #ffffff;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 label{
@@ -107,12 +107,13 @@ label{
 
 p{
   padding-bottom: 10px;
-  align-self: baseline;
+  align-self: center;
   margin-left: 5%;
   color: rgb(191, 148, 255)
 }
 input{
   align-self: baseline;
+  color: rgba(245, 245, 245, 0.637);
 }
 input::placeholder {
   color: rgba(245, 245, 245, 0.342);
@@ -125,7 +126,7 @@ input::placeholder {
 .espaco {
   background-color: #700b97;
   height: 6vh;
-  width: 90%;
+  width: 85%;
   display: flex;
   justify-content: flex-start;
   border-radius: 10px;
@@ -133,7 +134,19 @@ input::placeholder {
   justify-items: center;
 }
 
-#icone {
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1
+}
+
+.icone {
   width: 15%;
   height: 100%;
   display: flex;
@@ -143,7 +156,15 @@ input::placeholder {
 }
 
 a{
-  color: rgb(191, 148, 255)
+  margin-top: 5px;
+  color: rgb(191, 148, 255);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+a:hover{
+  opacity: 1;
+  text-decoration: underline;
 }
 
 @keyframes transicao {
