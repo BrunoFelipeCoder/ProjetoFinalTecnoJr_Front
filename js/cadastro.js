@@ -1,16 +1,17 @@
 //Obtendo as informações dos inputs do html através do ID
 const nome = document.getElementById("nome");
 const dataNasc = document.getElementById("dataNasc");
-const email = document.getElementById("email");
+let email;
 const nome_usuario = document.getElementById("nome_usuario");
 const senha = document.getElementById("senha");
 const confirmar_senha = document.getElementById("confirmar_senha");
+let url;
 
 //Função para cadastrar o usuário no Banco de Dados
 function cadastrarUsuario(user) {
   //url do caminho da API para adicionar o usuário no BD
-  const url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
-  //const url = "http://localhost:3000/auth/cadastro";
+  //url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
+  url = "http://localhost:3000/auth/cadastro";
   //Criando uma instancia do objeto XMLHttpRequest que serve parar facilitar o envio e obtenção de dados do servidor sem que precise recarregar toda a pagina
   let request = new XMLHttpRequest();
   //Abrindo a requisição tendo como parâmetros o método que vai ser usado e o endereço do servidor (ambos obrigatórios) além de informar se vai ser uma operação assíncrona(true) ou síncrona(false), essa por sua vez é optativa
@@ -62,7 +63,7 @@ function cadastro(event) {
   //Criando um objeto user, e colocando dentro dele as informações obtidas do form de cadastro fornecidas pelo usuário
   const user = {
     nome: nome.value,
-    email: email.value,
+    email,
     nomeUsuario: nome_usuario.value,
     senha: senha.value,
   };
@@ -80,11 +81,37 @@ function cadastro(event) {
   return true;
 }
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const token = urlParams.get("token");
-if (token) {
-  console.log(token);
-} else {
-  console.log("falta verificar email");
+function verificarToken(token) {
+  //url = "https://ola-dev-backend.herokuapp.com/auth/verificar_token"
+  url = "http://localhost:3000/auth/verificar_token";
+  let request = new XMLHttpRequest();
+  request.open("POST", url, true);
+  request.setRequestHeader("Content-Type", "application/json");
+  request.send(JSON.stringify(token));
+  request.onload = () => {
+    if (request.status == 200) {
+      email = request.response;
+      return true;
+    } else {
+      return false;
+    }
+  };
 }
+
+window.onload = function () {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const token = urlParams.get("token");
+  if (token) {
+    const tokenSchema = {
+      token,
+    };
+    if (verificarToken(tokenSchema)) {
+      return true;
+    } else {
+      //window.location.replace("http://127.0.0.1:5500/html/login.html");
+    }
+  } else {
+    //window.location.replace("http://127.0.0.1:5500/html/login.html");
+  }
+};
