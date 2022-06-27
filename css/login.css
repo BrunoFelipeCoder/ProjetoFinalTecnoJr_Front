@@ -80,6 +80,7 @@ button:hover {
   position: relative;
   z-index: 2;
   overflow: hidden;
+  box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
 }
 
 #login_box::before {
