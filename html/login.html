@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login | Olá Dev!</title>
+    <script
+      src="https://kit.fontawesome.com/048239d8b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="esquerda"></div>
+    <div id="direita">
+      <form action="" id="login_box">
+        <h1>Olá Dev!</h1>
+        <div id="inputs">
+          <di class="espaco">
+            <div id="icone">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input
+              type="text"
+              class="input"
+              placeholder="Nome de Usuário"
+              name="nameuser"
+              required
+            />
+          </di>
+          <div class="espaco">
+            <div id="icone">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <input
+              type="password"
+              class="input"
+              placeholder="Senha"
+              name="senha"
+              required
+            />
+          </div>
+          <a id="esqueci" href="">Esqueci minha senha.</a>
+        </div>
+        <div id="botao">
+          <button type="submit">Entrar</button>
+          <small
+            >Não tem conta?
+            <a href="/html/cadastro.html">Cadastre-se!</a>
+            |
+            <input type="checkbox" name="" id="lembrarse" />
+            Lembre-se de mim.
+          </small>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
