@@ -1,10 +1,10 @@
 //Obtendo as informações dos inputs do html através do ID
 const nome = document.getElementById("nome");
 const dataNasc = document.getElementById("dataNasc");
-let email;
-const nome_usuario = document.getElementById("nome_usuario");
+let email = "";
+const nome_usuario = document.getElementById("usuario");
 const senha = document.getElementById("senha");
-const confirmar_senha = document.getElementById("confirmar_senha");
+const confirmar_senha = document.getElementById("senha2");
 let url;
 
 //Função para cadastrar o usuário no Banco de Dados
@@ -20,6 +20,7 @@ function cadastrarUsuario(user) {
   request.setRequestHeader("Content-Type", "application/json");
   //Enviando o arquivo usando o send, e como parâmetro passando o user (transformado em um JSON através do JSON.stringify())
   request.send(JSON.stringify(user));
+  console.log(request);
   //após ter enviado o arquivo, usamos o onload para saber a resposta do servidor
   request.onload = () => {
     alert(request.response);
@@ -60,6 +61,8 @@ function conferirData() {
 
 //Função principal da página cadastro, onde ela chamará todas as três funções acima durante sua execução
 function cadastro(event) {
+  event.preventDefault();
+  console.log(email);
   //Criando um objeto user, e colocando dentro dele as informações obtidas do form de cadastro fornecidas pelo usuário
   const user = {
     nome: nome.value,
@@ -67,51 +70,40 @@ function cadastro(event) {
     nomeUsuario: nome_usuario.value,
     senha: senha.value,
   };
+
+  if (user.email == "") {
+    alert("Token invalido!");
+    window.location.replace("/html/login.html");
+  }
+
+  if (!conferirSenha(user) || !conferirData(user)) {
+    return event.preventDefault();
+  }
+
+  if (cadastrarUsuario(user)) {
+    event.preventDefault();
+    return alert("Usuário não cadastrado!");
+  }
+
   //Chamando a função conferirSenha() e a conferirData(), dependendo dos seus retornos, a função para por aqui, mas a pagina não é recarregada devido ao event.preventDefault();
-  if (!conferirSenha(user) || !conferirData()) {
-    event.preventDefault();
-    return false;
-  }
-  //Após passar pela verificação acima, é chamada a função cadastrarUsuario dentro de uma estrutura de condição para que dependendo da resposta siga caminho diferentes
-  if (!cadastrarUsuario(user)) {
-    event.preventDefault();
-    return false;
-  }
-  location.reload();
   return true;
 }
 
-function verificarToken(token) {
-  //url = "https://ola-dev-backend.herokuapp.com/auth/verificar_token"
-  url = "http://localhost:3000/auth/verificar_token";
+function verificarToken(codigo) {
+  url = "http://localhost:3000/auth/verificar_token/";
   let request = new XMLHttpRequest();
   request.open("POST", url, true);
   request.setRequestHeader("Content-Type", "application/json");
-  request.send(JSON.stringify(token));
+  request.send(JSON.stringify(codigo));
+  console.log(request);
   request.onload = () => {
-    if (request.status == 200) {
-      email = request.response;
-      return true;
-    } else {
-      return false;
-    }
+    email = request.response;
   };
 }
 
-window.onload = function () {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
+window.onload = () => {
+  const urlParams = new URLSearchParams(window.location.search);
   const token = urlParams.get("token");
-  if (token) {
-    const tokenSchema = {
-      token,
-    };
-    if (verificarToken(tokenSchema)) {
-      return true;
-    } else {
-      //window.location.replace("http://127.0.0.1:5500/html/login.html");
-    }
-  } else {
-    //window.location.replace("http://127.0.0.1:5500/html/login.html");
-  }
+  const myParam = { token: token };
+  verificarToken(myParam);
 };
