@@ -16,7 +16,9 @@ function logar(event) {
   request.send(JSON.stringify(user));
   request.onload = () => {
     if (request.status == 200) {
-      window.location.replace("/html/perfil.html");
+      window.location.replace(
+        "https://brunofelipecoder.github.io/ProjetoFinalTecnoJr_Front/html/perfil.html"
+      );
     } else {
       console.log("não entrou");
     }
