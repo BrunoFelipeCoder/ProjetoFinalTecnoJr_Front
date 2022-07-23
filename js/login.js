@@ -8,7 +8,8 @@ function logar(event) {
     usuario: usuario.value,
     senha: senha.value,
   };
-  url = "http://localhost:3000/auth/autenticacao";
+  //url = "http://localhost:3000/auth/autenticacao";
+  url = "https://ola-dev-backend.herokuapp.com/auth/autenticacao";
   let request = new XMLHttpRequest();
   request.open("POST", url, true);
   request.setRequestHeader("Content-Type", "application/json");

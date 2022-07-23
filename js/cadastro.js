@@ -10,8 +10,8 @@ let url;
 //Função para cadastrar o usuário no Banco de Dados
 function cadastrarUsuario(user) {
   //url do caminho da API para adicionar o usuário no BD
-  //url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
-  url = "http://localhost:3000/auth/cadastro";
+  url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
+  //url = "http://localhost:3000/auth/cadastro";
   //Criando uma instancia do objeto XMLHttpRequest que serve parar facilitar o envio e obtenção de dados do servidor sem que precise recarregar toda a pagina
   let request = new XMLHttpRequest();
   //Abrindo a requisição tendo como parâmetros o método que vai ser usado e o endereço do servidor (ambos obrigatórios) além de informar se vai ser uma operação assíncrona(true) ou síncrona(false), essa por sua vez é optativa
@@ -90,7 +90,8 @@ function cadastro(event) {
 }
 
 function verificarToken(codigo) {
-  url = "http://localhost:3000/auth/verificar_token/";
+  //url = "http://localhost:3000/auth/verificar_token/";
+  url = "https://ola-dev-backend.herokuapp.com/auth/verificar_token";
   let request = new XMLHttpRequest();
   request.open("POST", url, true);
   request.setRequestHeader("Content-Type", "application/json");
