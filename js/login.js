@@ -19,7 +19,6 @@ function logar(event) {
     if (request.status == 200) {
       chave = request.response;
       localStorage.setItem("chave", chave);
-      //window.location.replace("http://127.0.0.1:5500/html/perfil.html");
       window.location.replace(
         "https://brunofelipecoder.github.io/ProjetoFinalTecnoJr_Front/html/perfil.html"
       );
