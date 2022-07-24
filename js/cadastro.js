@@ -74,6 +74,7 @@ function cadastro(event) {
   if (user.email == "") {
     alert("Token invalido!");
     window.location.replace("https://127.0.0.1:5500/html/login.html");
+    //window.location.replace("http://oladev.byethost24.com/html/perfil.html");
   }
 
   if (!conferirSenha(user) || !conferirData(user)) {

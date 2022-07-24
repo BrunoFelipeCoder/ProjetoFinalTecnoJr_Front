@@ -18,7 +18,7 @@ function logar(event) {
   request.onload = () => {
     if (request.status == 200) {
       chave = request.response;
-      Cookies.set("chave", chave);
+      localStorage.setItem("chave", chave);
       window.location.replace("http://127.0.0.1:5500/html/perfil.html");
     } else {
       console.log(request.response);
