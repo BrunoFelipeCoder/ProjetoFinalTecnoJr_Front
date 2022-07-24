@@ -34,7 +34,7 @@ function buscar(e) {
 
 window.onload = () => {
   const chave = {
-    chave: Cookies.get("chave"),
+    chave: localStorage.getItem("chave"),
   };
   //url = "http://localhost:3000/request/usuario";
   url = "https://ola-dev-backend.herokuapp.com/request/usuario";
