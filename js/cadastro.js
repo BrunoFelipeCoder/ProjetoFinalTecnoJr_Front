@@ -73,7 +73,7 @@ function cadastro(event) {
 
   if (user.email == "") {
     alert("Token invalido!");
-    window.location.replace("/html/login.html");
+    window.location.replace("https://127.0.0.1:5500/html/login.html");
   }
 
   if (!conferirSenha(user) || !conferirData(user)) {
