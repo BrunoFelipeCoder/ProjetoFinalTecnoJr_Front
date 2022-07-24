@@ -12,6 +12,14 @@
     ></script>
   </head>
   <body>
+    <input
+      type="text"
+      name="Username"
+      placeholder="Username"
+      id="campo_busca"
+      onkeyup="buscar(this)"
+    />
+    <section id="resultados"></section>
     <div id="container">
       <div id="topbar">
         <img id="header" src="../img/background_cadastro.png" alt="" />
@@ -20,8 +28,8 @@
           <button id="editarPerfil">Editar Perfil</button>
         </div>
         <div id="info">
-          <h1>Luiz</h1>
-          <p id="usuario">@Luiz</p>
+          <h1 id="nome">Luiz</h1>
+          <p id="usuario"></p>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum esse
             ratione eveniet suscipit corrupti unde, iusto accusantium
@@ -42,5 +50,7 @@
       </div>
       <p href="">é isso ae</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="../js/perfil.js"></script>
   </body>
 </html>
