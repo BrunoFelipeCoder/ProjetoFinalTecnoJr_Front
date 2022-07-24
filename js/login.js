@@ -1,5 +1,6 @@
 const usuario = document.getElementById("usuario");
 const senha = document.getElementById("senha");
+let chave;
 let url;
 
 function logar(event) {
@@ -16,10 +17,11 @@ function logar(event) {
   request.send(JSON.stringify(user));
   request.onload = () => {
     if (request.status == 200) {
-      window.location.replace(
-        "https://brunofelipecoder.github.io/ProjetoFinalTecnoJr_Front/html/perfil.html"
-      );
+      chave = request.response;
+      Cookies.set("chave", chave);
+      window.location.replace("http://127.0.0.1:5500/html/perfil.html");
     } else {
+      console.log(request.response);
       console.log("não entrou");
     }
   };
