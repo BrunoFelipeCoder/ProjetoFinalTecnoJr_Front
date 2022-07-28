@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuário | Olá Dev!</title>
+  </head>
+  <body>
+    <form action="" onsubmit="atualizarImgPerfil(event)">
+      <label for="">Imagem de Perfil</label>
+      <input
+        type="url"
+        name="imagemPerfil"
+        id="imagemPerfil"
+        placeholder="Informe o link da sua imagem de perfil..."
+        required
+      />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <form action="" onsubmit="atualizarImgBanner(event)">
+      <label for="">Imagem de Banner</label>
+      <input
+        type="url"
+        name="imagemBanner"
+        id="imagemBanner"
+        placeholder="Informe o link da imagem do seu banner..."
+        required
+      />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <form action="" onsubmit="atualizarSobreMim(event)">
+      <label for="">Sobre mim</label>
+      <input
+        type="sobreMim"
+        id="sobreMim"
+        placeholder="Fale um pouco sobre você"
+        required
+      />
+      <button type="submit">Enviar</button>
+    </form>
+    <button><a href="./perfil.html">Voltar para o Perfil</a></button>
+    <script src="../js/config.js"></script>
+  </body>
+</html>
