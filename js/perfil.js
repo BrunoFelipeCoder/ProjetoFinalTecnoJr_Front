@@ -1,4 +1,5 @@
 let user;
+let userName;
 
 function buscar(e) {
   const resultados = document.getElementById("resultados");
@@ -9,8 +10,8 @@ function buscar(e) {
     return;
   }
   if (match[0] === e.value) {
-    //url = "http://localhost:3000/request/buscar";
-    url = "https://ola-dev-backend.herokuapp.com/request/buscar";
+    url = "http://localhost:3000/request/buscar";
+    //url = "https://ola-dev-backend.herokuapp.com/request/buscar";
     let request = new XMLHttpRequest();
     request.open("POST", url, true);
     request.setRequestHeader("Content-Type", "application/json");
@@ -22,10 +23,12 @@ function buscar(e) {
         resultados.innerHTML = `<p>Não foram encontrados resultados!</p>`;
         return;
       }
-      console.log(typeof usuario);
       usuario.usuario.forEach((user, index) => {
+        console.log(userName);
+        console.log(user.nomeUsuario);
         if (index > 0) resultados.innerHTML += `<hr>`;
-        resultados.innerHTML += `<p>${user.nomeUsuario}</p>`;
+        if (userName != user.nomeUsuario)
+          resultados.innerHTML += `<a href="./perfilOutro.html?userID=${user.nomeUsuario}">${user.nomeUsuario}</a>`;
       });
     };
     return;
@@ -36,18 +39,19 @@ window.onload = () => {
   const chave = {
     chave: localStorage.getItem("chave"),
   };
-  //url = "http://localhost:3000/request/usuario";
-  url = "https://ola-dev-backend.herokuapp.com/request/usuario";
+  url = "http://localhost:3000/request/usuario";
+  //url = "https://ola-dev-backend.herokuapp.com/request/usuario";
   let request = new XMLHttpRequest();
   request.open("POST", url, true);
   request.setRequestHeader("Content-Type", "application/json");
   request.send(JSON.stringify(chave));
   request.onload = () => {
     user = JSON.parse(request.response);
-    console.log(typeof user);
-    console.log(user.nome);
-    console.log(user.nomeUsuario);
+    userName = user.nomeUsuario;
     document.querySelector("#nome").innerText = user.nome;
     document.querySelector("#usuario").innerText = user.nomeUsuario;
+    document.querySelector("#sobre").innerText = user.descricao;
+    document.querySelector("#header").src = user.imgBanner;
+    document.querySelector("#foto").src = user.imgPerfil;
   };
 };
