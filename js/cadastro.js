@@ -10,8 +10,8 @@ let url;
 //Função para cadastrar o usuário no Banco de Dados
 function cadastrarUsuario(user) {
   //url do caminho da API para adicionar o usuário no BD
-  url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
-  //url = "http://localhost:3000/auth/cadastro";
+  //url = "https://ola-dev-backend.herokuapp.com/auth/cadastro";
+  url = "http://localhost:3000/auth/cadastro";
   //Criando uma instancia do objeto XMLHttpRequest que serve parar facilitar o envio e obtenção de dados do servidor sem que precise recarregar toda a pagina
   let request = new XMLHttpRequest();
   //Abrindo a requisição tendo como parâmetros o método que vai ser usado e o endereço do servidor (ambos obrigatórios) além de informar se vai ser uma operação assíncrona(true) ou síncrona(false), essa por sua vez é optativa
@@ -23,9 +23,12 @@ function cadastrarUsuario(user) {
   console.log(request);
   //após ter enviado o arquivo, usamos o onload para saber a resposta do servidor
   request.onload = () => {
-    alert(request.response);
-    if (request.status != 200) {
-      return false;
+    chave = request.response;
+    localStorage.setItem("chave", chave);
+    if (request.status == 200) {
+      window.location.replace(
+        "http://127.0.0.1:5500/html/configuracoesPerfil.html"
+      );
     }
     return true;
   };
@@ -69,21 +72,22 @@ function cadastro(event) {
     email,
     nomeUsuario: nome_usuario.value,
     senha: senha.value,
+    dataNascimento: dataNasc.value,
   };
 
   if (user.email == "") {
     alert("Token invalido!");
-    //window.location.replace("https://127.0.0.1:5500/html/login.html");
-    window.location.replace(
+    window.location.replace("http://127.0.0.1:5500/html/login.html");
+    /*window.location.replace(
       "https://brunofelipecoder.github.io/ProjetoFinalTecnoJr_Front/html/login.html"
-    );
+    );*/
   }
 
   if (!conferirSenha(user) || !conferirData(user)) {
     return event.preventDefault();
   }
 
-  if (cadastrarUsuario(user)) {
+  if (!cadastrarUsuario(user)) {
     event.preventDefault();
     return alert("Usuário não cadastrado!");
   }
@@ -93,8 +97,8 @@ function cadastro(event) {
 }
 
 function verificarToken(codigo) {
-  //url = "http://localhost:3000/auth/verificar_token/";
-  url = "https://ola-dev-backend.herokuapp.com/auth/verificar_token";
+  url = "http://localhost:3000/auth/verificar_token/";
+  //url = "https://ola-dev-backend.herokuapp.com/auth/verificar_token";
   let request = new XMLHttpRequest();
   request.open("POST", url, true);
   request.setRequestHeader("Content-Type", "application/json");
