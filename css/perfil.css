@@ -138,6 +138,7 @@ body {
 
 .post {
 	display: flex;
+	margin-bottom: 20px;
 	flex-direction: column;
 	background-color: rgb(50, 28, 96);
 	border-radius: 20px;

@@ -61,25 +61,48 @@ window.onload = () => {
 			.setAttribute("style", `--themecolor: #${user.corTema}`);
 		posts.forEach((post, index) => {
 			if (index > 0) resultados.innerHTML += `<hr>`;
-			posteres.innerHTML += `
+			if (!post.imagem.length) {
+				posteres.innerHTML += `
+				<div class="post">
+				<div class="conteudoPost">
+					<div class="topoPost">
+						<img
+							class="fotoMini"
+							src="${user.imgPerfil}"
+							alt=""
+						/>
+						<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
+					</div>
+					<p class="descricaoPost">${post.texto}</p>
+					<div class="interacoes">
+						<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
+						<a href=""><i class="fa-solid fa-comment"></i>${post.numeroComentarios}</a>
+					</div>
+				</div>
+			</div>
+			`;
+			} else {
+				posteres.innerHTML += `
 			<div class="post">
 			<div class="conteudoPost">
 				<div class="topoPost">
 					<img
 						class="fotoMini"
-						src="https://img2.gratispng.com/20180327/ssq/kisspng-computer-icons-user-profile-avatar-profile-5ab9e3b05772c0.6947928615221318883582.jpg"
+						src="${user.imgPerfil}"
 						alt=""
 					/>
-					<p class="usuarioPost"><a href="">Usuario</a></p>
+					<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
 				</div>
-				<p class="descricaoPost">Texto do Posto</p>
+				<p class="descricaoPost">${post.texto}</p>
+				<img src="${post.imagem[0]}" class="midiaPost">
 				<div class="interacoes">
-					<a href=""><i class="fa-solid fa-heart"></i>0</a>
-					<a href=""><i class="fa-solid fa-comment"></i>0</a>
+					<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
+					<a href=""><i class="fa-solid fa-comment"></i>${post.numeroComentarios}</a>
 				</div>
 			</div>
 		</div>
 		`;
+			}
 		});
 	};
 };
