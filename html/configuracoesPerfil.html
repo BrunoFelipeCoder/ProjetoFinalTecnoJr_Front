@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Usuário | Olá Dev!</title>
+		<title>Editar Usuário | Olá Dev!</title>
 		<link rel="stylesheet" href="../css/configuracoesPerfil.css" />
 		<script
 			src="https://kit.fontawesome.com/048239d8b6.js"
@@ -46,8 +46,10 @@
 			</form>
 			<form action="" onsubmit="atualizarCorTema(event)">
 				<label for="">Tema do Usuário</label>
+				<div class="espaco">
 				<input type="color" name="corTema" id="corTema" />
-				<button type="submit">Atualizar Cor</button>
+				<button type="submit" id="botaoCor">Atualizar Cor <i class="fa-solid fa-palette"></i></button>
+			</div>
 			</form>
 			<form action="" onsubmit="atualizarSobreMim(event)">
 				<label for="">Sobre mim</label>
