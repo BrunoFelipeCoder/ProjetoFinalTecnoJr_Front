@@ -149,6 +149,11 @@ body {
 
 .post a {
 	color: white;
+	text-decoration: none;
+}
+
+.post .usuarioPost a{
+	color:rgba(153, 153, 153, 0.685);
 }
 
 .topoPost {
