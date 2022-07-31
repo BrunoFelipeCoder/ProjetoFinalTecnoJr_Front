@@ -32,7 +32,6 @@ function buscar(e) {
     request.send(
       JSON.stringify({
         userName: e.value,
-        chave: localStorage.getItem("chave"),
       })
     );
     request.onload = () => {
@@ -44,7 +43,10 @@ function buscar(e) {
       }
       usuario.usuario.forEach((user, index) => {
         if (index > 0) resultados.innerHTML += `<hr>`;
-        resultados.innerHTML += `<a href="./perfilOutro.html?userID=${user.nomeUsuario}">${user.nomeUsuario}</a>`;
+        if (user.chave == localStorage.getItem("chave"))
+          resultados.innerHTML += `<a href="./perfil.html">${user.nomeUsuario}</a>`;
+        else
+          resultados.innerHTML += `<a href="./perfilOutro.html?userID=${user.nomeUsuario}">${user.nomeUsuario}</a>`;
       });
     };
     return;
