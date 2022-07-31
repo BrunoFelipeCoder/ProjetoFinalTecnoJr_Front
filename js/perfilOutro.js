@@ -29,7 +29,12 @@ function buscar(e) {
     let request = new XMLHttpRequest();
     request.open("POST", url, true);
     request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify({ usuario: e.value }));
+    request.send(
+      JSON.stringify({
+        userName: e.value,
+        chave: localStorage.getItem("chave"),
+      })
+    );
     request.onload = () => {
       let usuario = JSON.parse(request.response);
       resultados.innerHTML = "";
@@ -37,7 +42,6 @@ function buscar(e) {
         resultados.innerHTML = `<p>Não foram encontrados resultados!</p>`;
         return;
       }
-      console.log(typeof usuario);
       usuario.usuario.forEach((user, index) => {
         if (index > 0) resultados.innerHTML += `<hr>`;
         resultados.innerHTML += `<a href="./perfilOutro.html?userID=${user.nomeUsuario}">${user.nomeUsuario}</a>`;
