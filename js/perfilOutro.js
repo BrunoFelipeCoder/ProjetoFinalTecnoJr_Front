@@ -45,8 +45,7 @@ function buscar(e) {
 				resultados.innerHTML = `<p>Não foram encontrados resultados!</p>`;
 				return;
 			}
-			usuario.usuario.forEach((user, index) => {
-				if (index > 0) resultados.innerHTML += `<hr>`;
+			usuario.usuario.forEach((user) => {
 				if (user.chave == localStorage.getItem("chave"))
 					resultados.innerHTML += `<a href="./perfil.html">${user.nomeUsuario}</a>`;
 				else
