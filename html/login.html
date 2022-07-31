@@ -14,7 +14,7 @@
   <body>
     <div id="esquerda"></div>
     <div id="direita">
-      <form action="" id="login_box">
+      <form action="" id="login_box" onsubmit="logar(event)">
         <h1>Olá Dev!</h1>
         <div id="inputs">
           <di class="espaco">
@@ -24,6 +24,7 @@
             <input
               type="text"
               class="input"
+              id="usuario"
               placeholder="Nome de Usuário"
               name="nameuser"
               required
@@ -36,6 +37,7 @@
             <input
               type="password"
               class="input"
+              id="senha"
               placeholder="Senha"
               name="senha"
               required
@@ -48,12 +50,12 @@
           <small
             >Não tem conta?
             <a href="/html/email.html">Cadastre-se!</a>
-            |
-            <input type="checkbox" name="" id="lembrarse" />  
+            <input type="checkbox" name="" id="lembrarse" />
             Lembre-se de mim.
           </small>
         </div>
       </form>
     </div>
+    <script src="../js/login.js"></script>
   </body>
 </html>
