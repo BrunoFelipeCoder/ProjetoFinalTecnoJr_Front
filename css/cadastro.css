@@ -19,15 +19,12 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/programadora.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #cadastro {
   height: 90vh;
-  width: 40vw;
+  width: 50vw;
+  min-width: 450px;
   border-radius: 15px;
   padding: 15px;
   display: flex;
