@@ -109,6 +109,18 @@ button:hover {
    opacity: 1;
 }
 
+a{
+  margin-top: 5px;
+  color: rgb(191, 148, 255);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
 @keyframes transicao {
     0% {
       background-position: -100% -100%;
