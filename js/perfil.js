@@ -77,7 +77,7 @@ window.onload = () => {
 						</div>
 						<p class="descricaoPost">${post.texto}</p>
 						<div class="interacoes">
-							<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
+							<button onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></button>
 							<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
 						</div>
 					</div>
@@ -113,3 +113,8 @@ window.onload = () => {
 		});
 	};
 };
+
+function like(event) {
+	event.preventDefault();
+	console.log("teste");
+}
