@@ -59,11 +59,33 @@ window.onload = () => {
 		document
 			.querySelector("body")
 			.setAttribute("style", `--themecolor: #${user.corTema}`);
+		let cont = 0;
 		posts.forEach((post, index) => {
+			console.log(post);
 			if (index > 0) resultados.innerHTML += `<hr>`;
 			if (!post.imagem.length) {
 				posteres.innerHTML += `
 				<div class="post">
+					<div class="conteudoPost">
+						<div class="topoPost">
+							<img
+								class="fotoMini"
+								src="${user.imgPerfil}"
+								alt=""
+							/>
+							<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
+						</div>
+						<p class="descricaoPost">${post.texto}</p>
+						<div class="interacoes">
+							<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
+							<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
+						</div>
+					</div>
+				</div>
+			`;
+			} else {
+				posteres.innerHTML += `
+			<div class="post">
 				<div class="conteudoPost">
 					<div class="topoPost">
 						<img
@@ -74,34 +96,18 @@ window.onload = () => {
 						<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
 					</div>
 					<p class="descricaoPost">${post.texto}</p>
+					<div class="wrapperIMG" id="post${++cont}"></div>
 					<div class="interacoes">
 						<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
-						<a href=""><i class="fa-solid fa-comment"></i>${post.numeroComentarios}</a>
+						<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
 					</div>
 				</div>
 			</div>
-			`;
-			} else {
-				posteres.innerHTML += `
-			<div class="post">
-			<div class="conteudoPost">
-				<div class="topoPost">
-					<img
-						class="fotoMini"
-						src="${user.imgPerfil}"
-						alt=""
-					/>
-					<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
-				</div>
-				<p class="descricaoPost">${post.texto}</p>
-				<img src="${post.imagem[0]}" class="midiaPost">
-				<div class="interacoes">
-					<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
-					<a href=""><i class="fa-solid fa-comment"></i>${post.numeroComentarios}</a>
-				</div>
-			</div>
-		</div>
 		`;
+				post.imagem.forEach((imgLink) => {
+					let teste = document.querySelector(`#post${cont}`);
+					teste.innerHTML += `<img src="${imgLink}" class="midiaPost">`;
+				});
 			}
 		});
 	};
