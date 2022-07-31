@@ -1,103 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/perfil.css" />
-    <title>Perfil | Olá Dev</title>
-    <script
-      src="https://kit.fontawesome.com/048239d8b6.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div id="container">
-      <div id="topbar">
-        <div id="pesquisa">
-          <div id="campoBusca">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input
-            type="text"
-            name="Username"
-            placeholder="Pesquise no Olá Dev!"
-            id="campo_busca"
-            onkeyup="buscar(this)"
-            />
-            <section id="resultados"></section>
-        </div>
-      </div>
-        <img
-          id="header"
-          src="https://cdn.phenompeople.com/CareerConnectResources/prod/PHILUS/images/profile-aqua-1553095764415.png"
-          alt=""
-        />
-        <div id="baixoTop">
-          <img
-            id="foto"
-            src="https://img2.gratispng.com/20180327/ssq/kisspng-computer-icons-user-profile-avatar-profile-5ab9e3b05772c0.6947928615221318883582.jpg"
-            alt=""
-          />
-          <button class="botaoHeader" id="editarPerfil">
-            <a href="./configuracoesPerfil.html" class="textoBotao">Editar Perfil</a>
-          </button>
-        </div>
-        <div id="info">
-          <h1 id="nome">Undefined</h1>
-          <p id="usuario">@undefined</p>
-          <p id="sobre">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus officiis quos corrupti quis possimus distinctio expedita, repudiandae consequatur voluptatum debitis architecto a dolorum ab placeat tenetur voluptate, iste nam aliquid.</p>
-          <div id="seguidoresNumero">
-            <p id="seguindo">Seguindo 96</p>
-            <p id="seguidores">Seguidores 42</p>
-          </div>
-        </div>
-        <div id="botoesTopbar">
-          <a href="">Postagens</a>
-          <a href="">Mídia</a>
-          <a href="">Curtidas</a>
-          <a href="./login.html">Logout</a>
-        </div>
-      </div>
-        <div class="post">
-          <div id="conteudoPost">
-            <div id="topoPost">
-              <img
-              id="fotoMini"
-              src="https://img2.gratispng.com/20180327/ssq/kisspng-computer-icons-user-profile-avatar-profile-5ab9e3b05772c0.6947928615221318883582.jpg"
-              alt=""
-            />
-            <p id="nomePost">Undefined</p>
-            <p id="usuarioPost">@undefined</p>
-            </div>
-            <div id="descricaoPost">Vei olha esse lorem aqui: Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ut corrupti quisquam eos voluptas distinctio repellat aperiam facere in laboriosam eius sit laborum, eveniet assumenda quasi ducimus optio sed rerum?
-            </div>
-            <div id="interacoes">
-              <a href=""><i class="fa-solid fa-heart"></i> 123</a>
-              <a href=""><i class="fa-solid fa-comment"></i> 456</a>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div id="conteudoPost">
-            <div id="topoPost">
-              <img
-              id="fotoMini"
-              src="https://img2.gratispng.com/20180327/ssq/kisspng-computer-icons-user-profile-avatar-profile-5ab9e3b05772c0.6947928615221318883582.jpg"
-              alt=""
-            />
-            <p id="nomePost">Undefined</p>
-            <p id="usuarioPost">@undefined</p>
-            </div>
-            <div id="descricaoPost">Vei olha esse lorem aqui:
-            </div>
-            
-            <img src="..\img\programadora.gif" alt="" id="midiaPost">
-            <div id="interacoes">
-              <a href=""><i class="fa-solid fa-heart"></i> 789</a>
-              <a href=""><i class="fa-solid fa-comment"></i> 12</a>
-            </div>
-          </div>
-        </div>
-    <script src="../js/perfil.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/perfil.css" />
+		<title>Perfil | Olá Dev</title>
+		<script
+			src="https://kit.fontawesome.com/048239d8b6.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="topbar">
+				<div id="pesquisa">
+					<div id="campoBusca">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<input
+							type="text"
+							name="Username"
+							placeholder="Pesquise no Olá Dev!"
+							id="campo_busca"
+							onkeyup="buscar(this)"
+						/>
+						<section id="resultados"></section>
+					</div>
+				</div>
+				<img
+					id="header"
+					src="https://cdn.phenompeople.com/CareerConnectResources/prod/PHILUS/images/profile-aqua-1553095764415.png"
+					alt=""
+				/>
+				<div id="baixoTop">
+					<img
+						id="foto"
+						src="https://img2.gratispng.com/20180327/ssq/kisspng-computer-icons-user-profile-avatar-profile-5ab9e3b05772c0.6947928615221318883582.jpg"
+						alt=""
+					/>
+					<button class="botaoHeader" id="editarPerfil">
+						<a href="./configuracoesPerfil.html" class="textoBotao"
+							>Editar Perfil</a
+						>
+					</button>
+					<button class="botaoHeader" id="criarPost">
+						<a href="./criacaoPost.html" class="textoBotao"
+							>Criar Post</a
+						>
+					</button>
+				</div>
+				<div id="info">
+					<h1 id="nome">Undefined</h1>
+					<p id="usuario">@undefined</p>
+					<p id="sobre">
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Doloribus officiis quos corrupti quis possimus
+						distinctio expedita, repudiandae consequatur voluptatum
+						debitis architecto a dolorum ab placeat tenetur
+						voluptate, iste nam aliquid.
+					</p>
+					<div id="seguidoresNumero">
+						<p id="seguindo">Seguindo 96</p>
+						<p id="seguidores">Seguidores 42</p>
+					</div>
+				</div>
+				<div id="botoesTopbar">
+					<a href="">Postagens</a>
+					<a href="">Mídia</a>
+					<a href="">Curtidas</a>
+					<a href="./login.html">Logout</a>
+				</div>
+			</div>
+			<div id="feed">
+			</div>
+		</div>
+		<script src="../js/perfil.js"></script>
+	</body>
 </html>
