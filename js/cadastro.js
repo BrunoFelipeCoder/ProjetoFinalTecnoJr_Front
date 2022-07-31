@@ -89,7 +89,7 @@ function cadastro(event) {
 
   if (!cadastrarUsuario(user)) {
     event.preventDefault();
-    return alert("Usuário não cadastrado!");
+    return alert("Usuário cadastrado!");
   }
 
   //Chamando a função conferirSenha() e a conferirData(), dependendo dos seus retornos, a função para por aqui, mas a pagina não é recarregada devido ao event.preventDefault();
