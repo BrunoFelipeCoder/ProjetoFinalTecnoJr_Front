@@ -47,7 +47,6 @@ body {
   z-index: -1;
   position: absolute;
   background: linear-gradient(to right, #37064b 0%, #610b83 50%, #37064b 100%);
-  transform: rotateZ(135deg);
   background-size: 200%;
   animation: transicao 10s linear infinite;
 }
@@ -110,10 +109,12 @@ p{
   margin-left: 5%;
   color: rgb(191, 148, 255)
 }
+
 input{
   align-self: baseline;
   color: rgba(245, 245, 245, 0.637);
 }
+
 input::placeholder {
   color: rgba(245, 245, 245, 0.342);
 }
