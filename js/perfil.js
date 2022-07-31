@@ -27,8 +27,7 @@ function buscar(e) {
 				resultados.innerHTML = `<p>Não foram encontrados resultados!</p>`;
 				return;
 			}
-			usuarios.usuario.forEach((user, index) => {
-				if (index > 0) resultados.innerHTML += `<hr>`;
+			usuarios.usuario.forEach((user) => {
 				if (userName != user.nomeUsuario)
 					resultados.innerHTML += `<a href="./perfilOutro.html?userID=${user.nomeUsuario}">${user.nomeUsuario}</a>`;
 			});
@@ -60,9 +59,8 @@ window.onload = () => {
 			.querySelector("body")
 			.setAttribute("style", `--themecolor: #${user.corTema}`);
 		let cont = 0;
-		posts.forEach((post, index) => {
+		posts.forEach((post) => {
 			console.log(post);
-			if (index > 0) resultados.innerHTML += `<hr>`;
 			if (!post.imagem.length) {
 				posteres.innerHTML += `
 				<div class="post">
