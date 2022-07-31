@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: 0%;
 }
 
 body {
@@ -23,30 +23,30 @@ body {
     gap: 20px;
 }
 
-#header{
-    height: 200px;
-    width: 100%;
-    align-self: center; 
-    object-fit: cover;
+#header {
+  height: 200px;
+  width: 100%;
+  align-self: center;
+  object-fit: cover;
 }
 
-#topbar{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(50, 28, 96);
-    border-radius: 0px 0px 20px 20px;  
-    padding-bottom: 10px;
-    box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
+#topbar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(50, 28, 96);
+  border-radius: 0px 0px 20px 20px;
+  padding-bottom: 10px;
+  box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
 }
 
-#baixoTop{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: space-between;
-    padding: 10px;
-    width: 95%;
-    align-items: center;
+#baixoTop {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 10px;
+  width: 95%;
+  align-items: center;
 }
 
 #editarPerfil{
@@ -69,52 +69,51 @@ body {
     object-fit: cover;
 }
 
-
-#info{
-    display: flex;
-    flex-direction: column;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 15px;
-    margin-bottom: 20px;
-    gap: 5px;
+#info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  gap: 5px;
 }
 
-#info h1{
-    font-size: 20px;
+#info h1 {
+  font-size: 20px;
 }
-#info #usuario{
-    color: rgba(255, 255, 255, 0.568);
-}
-
-#seguidoresNumero{
-    display: flex;
-    gap: 10px;
-    color: rgba(255, 255, 255, 0.568);
+#info #usuario {
+  color: rgba(255, 255, 255, 0.568);
 }
 
-#botoesTopbar{
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    align-self: center;
-    margin-bottom: 5px;
+#seguidoresNumero {
+  display: flex;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.568);
 }
 
-#botoesTopbar a{
-    text-decoration: none;
-    color: rgb(191, 148, 255);
-    border-bottom: 3px solid transparent;
+#botoesTopbar {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  align-self: center;
+  margin-bottom: 5px;
 }
 
-#botoesTopbar a:hover{
-    border-bottom-color: #700b97;
+#botoesTopbar a {
+  text-decoration: none;
+  color: rgb(191, 148, 255);
+  border-bottom: 3px solid transparent;
 }
 
-#botoesTopbar a.active{
-    border-bottom-color: #700b97;
+#botoesTopbar a:hover {
+  border-bottom-color: #700b97;
+}
+
+#botoesTopbar a.active {
+  border-bottom-color: #700b97;
 }
 
 .post{
