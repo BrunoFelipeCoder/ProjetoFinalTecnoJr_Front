@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usuário | Olá Dev!</title>
-    <link rel="stylesheet" href="../css/configuracoesPerfil.css" />
-    <script
-    src="https://kit.fontawesome.com/048239d8b6.js"
-    crossorigin="anonymous"
-  ></script>
-  </head>
-  <body>
-    <div id="container">
-      <h1>Edite seu perfil:</h1>
-      <form action="" onsubmit="atualizarImgPerfil(event)">
-        <label for="">Imagem de Perfil</label>
-        <div class="espaco">
-          <input
-            type="url"
-            name="imagemPerfil"
-            id="imagemPerfil"
-            placeholder="Informe o link da sua imagem de perfil..."
-            required
-          />
-          <button type="submit"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-        </div>
-      </form>
-      <form action="" onsubmit="atualizarImgBanner(event)">
-        <label for="">Imagem de Banner</label>
-        <div class="espaco">
-          <input
-            type="url"
-            name="imagemBanner"
-            id="imagemBanner"
-            placeholder="Informe o link da imagem do seu banner..."
-            required
-          />
-          <button type="submit"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-        </div>
-      </form>
-      <form action="" onsubmit="atualizarSobreMim(event)">
-        <label for="">Sobre mim</label>
-        <div id="espacoSobre">
-          <input
-            type="text"
-            id="sobreMim"
-            placeholder="Fale um pouco sobre você..."
-            required
-          />
-          <button type="submit" id="botaoSobre">Enviar<i class="fa-solid fa-pen"></i></button>
-        </div>
-      </form>
-      <button id="botaoVoltar"><a href="./perfil.html">Voltar</a></button>
-    </div>
-    <script src="../js/config.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Usuário | Olá Dev!</title>
+		<link rel="stylesheet" href="../css/configuracoesPerfil.css" />
+		<script
+			src="https://kit.fontawesome.com/048239d8b6.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Edite seu perfil:</h1>
+			<form action="" onsubmit="atualizarImgPerfil(event)">
+				<label for="">Imagem de Perfil</label>
+				<div class="espaco">
+					<input
+						type="url"
+						name="imagemPerfil"
+						id="imagemPerfil"
+						placeholder="Informe o link da sua imagem de perfil..."
+						required
+					/>
+					<button type="submit">
+						<i class="fa-solid fa-arrow-up-from-bracket"></i>
+					</button>
+				</div>
+			</form>
+			<form action="" onsubmit="atualizarImgBanner(event)">
+				<label for="">Imagem de Banner</label>
+				<div class="espaco">
+					<input
+						type="url"
+						name="imagemBanner"
+						id="imagemBanner"
+						placeholder="Informe o link da imagem do seu banner..."
+						required
+					/>
+					<button type="submit">
+						<i class="fa-solid fa-arrow-up-from-bracket"></i>
+					</button>
+				</div>
+			</form>
+			<form action="" onsubmit="atualizarCorTema(event)">
+				<label for="">Tema do Usuário</label>
+				<input type="color" name="corTema" id="corTema" />
+				<button type="submit">Atualizar Cor</button>
+			</form>
+			<form action="" onsubmit="atualizarSobreMim(event)">
+				<label for="">Sobre mim</label>
+				<div id="espacoSobre">
+					<input
+						type="text"
+						id="sobreMim"
+						placeholder="Fale um pouco sobre você..."
+						required
+					/>
+					<button type="submit" id="botaoSobre">
+						Enviar<i class="fa-solid fa-pen"></i>
+					</button>
+				</div>
+			</form>
+			<button id="botaoVoltar"><a href="./perfil.html">Voltar</a></button>
+		</div>
+		<script src="../js/config.js"></script>
+	</body>
 </html>
