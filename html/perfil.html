@@ -14,6 +14,19 @@
   <body>
     <div id="container">
       <div id="topbar">
+        <div id="pesquisa">
+          <div id="campoBusca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+            type="text"
+            name="Username"
+            placeholder="Pesquise no Olá Dev!"
+            id="campo_busca"
+            onkeyup="buscar(this)"
+            />
+            <section id="resultados"></section>
+        </div>
+      </div>
         <img
           id="header"
           src="https://cdn.phenompeople.com/CareerConnectResources/prod/PHILUS/images/profile-aqua-1553095764415.png"
@@ -25,17 +38,17 @@
             src="https://img2.gratispng.com/20180327/ssq/kisspng-computer-icons-user-profile-avatar-profile-5ab9e3b05772c0.6947928615221318883582.jpg"
             alt=""
           />
-          <button id="editarPerfil">
-            <a href="./configuracoesPerfil.html">Editar Perfil</a>
+          <button class="botaoHeader" id="editarPerfil">
+            <a href="./configuracoesPerfil.html" class="textoBotao">Editar Perfil</a>
           </button>
         </div>
         <div id="info">
           <h1 id="nome">Undefined</h1>
-          <p id="usuario">Undefined</p>
-          <p id="sobre">Undefined</p>
+          <p id="usuario">@undefined</p>
+          <p id="sobre">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus officiis quos corrupti quis possimus distinctio expedita, repudiandae consequatur voluptatum debitis architecto a dolorum ab placeat tenetur voluptate, iste nam aliquid.</p>
           <div id="seguidoresNumero">
-            <p id="seguindo">Seguindo 0</p>
-            <p id="seguidores">Seguidores 0</p>
+            <p id="seguindo">Seguindo 96</p>
+            <p id="seguidores">Seguidores 42</p>
           </div>
         </div>
         <div id="botoesTopbar">
@@ -45,22 +58,12 @@
           <a href="./login.html">Logout</a>
         </div>
       </div>
-      <div id="resto">
-        <div id="pesquisa">
-            <input
-            type="text"
-            name="Username"
-            placeholder="Username"
-            id="campo_busca"
-            onkeyup="buscar(this)"
-          />
-          <section id="resultados"></section>
-        </div>
+        
         <div class="post">
-          olha aqui o post que maneiro!!!
+          <div id="conteudoPost">
+            conteudo do post
+          </div>
         </div>
-    </div>
-    </div>
     <script src="../js/perfil.js"></script>
   </body>
 </html>
