@@ -44,6 +44,19 @@ input{
     background-color: rgb(67, 39, 128);
 }
 
+#corTema{
+    --tamanho:50px;
+    width: 60px;
+    height: 60px;
+    padding:10px;
+}
+
+#botaoCor{
+    align-self: center;
+    width: max-content;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 #sobreMim{
     height: 80px;
 }
