@@ -5,7 +5,9 @@ function atualizarImgPerfil(event) {
 		chave: localStorage.getItem("chave"),
 		imgPerfil: imagemPerfil.value,
 	};
-	url = "http://localhost:3000/request/atualizarImgPerfil";
+	const url =
+		"https://ola-dev-backend.herokuapp.com/request/atualizarImgPerfil";
+	//url = "http://localhost:3000/request/atualizarImgPerfil";
 	let request = new XMLHttpRequest();
 	request.open("POST", url, true);
 	request.setRequestHeader("Content-Type", "application/json");
@@ -23,7 +25,9 @@ function atualizarImgBanner(event) {
 		chave: localStorage.getItem("chave"),
 		imgBanner: imagemBanner.value,
 	};
-	url = "http://localhost:3000/request/atualizarImgBanner";
+	//url = "http://localhost:3000/request/atualizarImgBanner";
+	const url =
+		"https://ola-dev-backend.herokuapp.com/request/atualizarImgBanner";
 	let request = new XMLHttpRequest();
 	request.open("POST", url, true);
 	request.setRequestHeader("Content-Type", "application/json");
@@ -41,7 +45,9 @@ function atualizarSobreMim(event) {
 		chave: localStorage.getItem("chave"),
 		sobreMim: sobreMim.value,
 	};
-	url = "http://localhost:3000/request/atualizarSobreMim";
+	//url = "http://localhost:3000/request/atualizarSobreMim";
+	const url =
+		"https://ola-dev-backend.herokuapp.com/request/atualizarSobreMim";
 	let request = new XMLHttpRequest();
 	request.open("POST", url, true);
 	request.setRequestHeader("Content-Type", "application/json");
@@ -60,7 +66,9 @@ function atualizarCorTema(event) {
 		chave: localStorage.getItem("chave"),
 		corTema: cor,
 	};
-	url = "http://localhost:3000/request/atualizarCorTema";
+	//url = "http://localhost:3000/request/atualizarCorTema";
+	const url =
+		"https://ola-dev-backend.herokuapp.com/request/atualizarCorTema";
 	let request = new XMLHttpRequest();
 	request.open("POST", url, true);
 	request.setRequestHeader("Content-Type", "application/json");

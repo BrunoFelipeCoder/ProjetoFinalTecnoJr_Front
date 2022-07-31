@@ -16,7 +16,8 @@ function postarPost(event) {
 	post.texto = document.querySelector("#descricaoPost").value;
 	console.log(post.texto);
 	post.chave = localStorage.getItem("chave");
-	url = "http://localhost:3000/request/criarPost";
+	//const url = "http://localhost:3000/request/criarPost";
+	const url = "https://ola-dev-backend.herokuapp.com/request/criarPost";
 	let request = new XMLHttpRequest();
 	request.open("POST", url, true);
 	request.setRequestHeader("Content-Type", "application/json");

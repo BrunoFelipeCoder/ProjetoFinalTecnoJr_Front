@@ -1,7 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userName = urlParams.get("userID");
 const myParam = { userName: userName };
-let url = "http://localhost:3000/request/outroUsuario";
+//let url = "http://localhost:3000/request/outroUsuario";
+let url = "https://ola-dev-backend.herokuapp.com/request/outroUsuario";
 let request = new XMLHttpRequest();
 request.open("POST", url, true);
 request.setRequestHeader("Content-Type", "application/json");
@@ -27,8 +28,8 @@ function buscar(e) {
 		return;
 	}
 	if (match[0] === e.value) {
-		url = "http://localhost:3000/request/buscar";
-		//url = "https://ola-dev-backend.herokuapp.com/request/buscar";
+		//url = "http://localhost:3000/request/buscar";
+		url = "https://ola-dev-backend.herokuapp.com/request/buscar";
 		let request = new XMLHttpRequest();
 		request.open("POST", url, true);
 		request.setRequestHeader("Content-Type", "application/json");

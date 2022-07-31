@@ -9,8 +9,8 @@ function buscar(e) {
 		return;
 	}
 	if (match[0] === e.value) {
-		url = "http://localhost:3000/request/buscar";
-		//url = "https://ola-dev-backend.herokuapp.com/request/buscar";
+		//url = "http://localhost:3000/request/buscar";
+		url = "https://ola-dev-backend.herokuapp.com/request/buscar";
 		let request = new XMLHttpRequest();
 		request.open("POST", url, true);
 		request.setRequestHeader("Content-Type", "application/json");
@@ -42,8 +42,8 @@ window.onload = () => {
 	const chave = {
 		chave: localStorage.getItem("chave"),
 	};
-	url = "http://localhost:3000/request/usuario";
-	//url = "https://ola-dev-backend.herokuapp.com/request/usuario";
+	//url = "http://localhost:3000/request/usuario";
+	url = "https://ola-dev-backend.herokuapp.com/request/usuario";
 	let request = new XMLHttpRequest();
 	request.open("POST", url, true);
 	request.setRequestHeader("Content-Type", "application/json");
