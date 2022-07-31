@@ -71,6 +71,7 @@ window.onload = () => {
 								src="${user.imgPerfil}"
 								alt=""
 							/>
+							<p class="nomePost"><a href="">${user.nomeUsuario}</a></p>
 							<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
 						</div>
 						<p class="descricaoPost">${post.texto}</p>
