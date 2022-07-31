@@ -15,7 +15,12 @@ function buscar(e) {
     let request = new XMLHttpRequest();
     request.open("POST", url, true);
     request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify({ usuario: e.value }));
+    request.send(
+      JSON.stringify({
+        userName: e.value,
+        chave: localStorage.getItem("chave"),
+      })
+    );
     request.onload = () => {
       let usuario = JSON.parse(request.response);
       resultados.innerHTML = "";
@@ -24,8 +29,6 @@ function buscar(e) {
         return;
       }
       usuario.usuario.forEach((user, index) => {
-        console.log(userName);
-        console.log(user.nomeUsuario);
         if (index > 0) resultados.innerHTML += `<hr>`;
         if (userName != user.nomeUsuario)
           resultados.innerHTML += `<a href="./perfilOutro.html?userID=${user.nomeUsuario}">${user.nomeUsuario}</a>`;

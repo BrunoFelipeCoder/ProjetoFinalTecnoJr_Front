@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-mail | Olá Dev!</title>
     <link rel="stylesheet" href="../css/email.css" />
     <script
-    src="https://kit.fontawesome.com/048239d8b6.js"
-    crossorigin="anonymous"
-  ></script>
-</head>
-<body>
-    <div id="modal_email">
-        <h1>
-            Comece já!
-        </h1>
-        <p>
-            Digite seu email para se cadastrar:
-        </p>
-        <di class="espaco">
-            <div id="icone">
-              <i class="fa-solid fa-at"></i>
-            </div>
-            <input
-              type="email"
-              class="email_cadastro"
-              placeholder="Seu e-mail"
-              name="nameuser"
-              required
-            />
-            <button type="submit">
-                Enviar
-            </button>
-        </di>
-        <a href="/html/login.html">Voltar</a>
-    </div>
-    
-</body>
+      src="https://kit.fontawesome.com/048239d8b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form id="modal_email" onsubmit="mandarEmail(event)">
+      <h1>Comece já!</h1>
+      <p>Digite seu email para se cadastrar:</p>
+      <div class="espaco">
+        <div id="icone">
+          <i class="fa-solid fa-at"></i>
+        </div>
+        <input
+          type="email"
+          class="email_cadastro"
+          id="email"
+          placeholder="Seu e-mail"
+          name="nameuser"
+          required
+        />
+        <button type="submit">Enviar</button>
+      </div>
+      <a href="/html/login.html">Voltar</a>
+    </form>
+    <script src="../js/confirmarEmail.js"></script>
+  </body>
 </html>
