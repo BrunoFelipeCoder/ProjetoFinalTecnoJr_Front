@@ -51,7 +51,7 @@ window.onload = () => {
 		let { user, posts } = JSON.parse(request.response);
 		userName = user.nomeUsuario;
 		document.querySelector("#nome").innerText = user.nome;
-		document.querySelector("#usuario").innerText = user.nomeUsuario;
+		document.querySelector("#usuario").innerText = `@${user.nomeUsuario}`;
 		document.querySelector("#sobre").innerText = user.descricao;
 		document.querySelector("#header").src = user.imgBanner;
 		document.querySelector("#foto").src = user.imgPerfil;
@@ -71,9 +71,8 @@ window.onload = () => {
 								src="${user.imgPerfil}"
 								alt=""
 							/>
-
-							<p class="nomePost"><a href="">${user.nomeUsuario}</a></p>
-							<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
+							<p class="nomePost"><a href="">${user.nome}</a></p>
+							<p class="usuarioPost"><a href="">@${user.nomeUsuario}</a></p>
 
 						</div>
 						<p class="descricaoPost">${post.texto}</p>
@@ -94,7 +93,8 @@ window.onload = () => {
 							src="${user.imgPerfil}"
 							alt=""
 						/>
-						<p class="usuarioPost"><a href="">${user.nomeUsuario}</a></p>
+						<p class="nomePost"><a href="">${user.nome}</a></p>
+						<p class="usuarioPost"><a href="">@${user.nomeUsuario}</a></p>
 					</div>
 					<p class="descricaoPost">${post.texto}</p>
 					<div class="wrapperIMG" id="post${++cont}"></div>
