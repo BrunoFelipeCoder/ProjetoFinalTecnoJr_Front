@@ -10,7 +10,7 @@ request.send(JSON.stringify(myParam));
 request.onload = () => {
 	user = JSON.parse(request.response);
 	document.querySelector("#nome").innerText = user.nome;
-	document.querySelector("#usuario").innerText = user.nomeUsuario;
+	document.querySelector("#usuario").innerText = `@${user.nomeUsuario}`;
 	document.querySelector("#sobre").innerText = user.sobreMim;
 	document.querySelector("#header").src = user.imgBanner;
 	document.querySelector("#foto").src = user.imgPerfil;
