@@ -14,6 +14,10 @@ request.onload = () => {
 	document.querySelector("#sobre").innerText = user.sobreMim;
 	document.querySelector("#header").src = user.imgBanner;
 	document.querySelector("#foto").src = user.imgPerfil;
+	document.querySelector("#seguindo").innerText = `Seguindo ${user.seguindo}`;
+	document.querySelector(
+		"#seguidores"
+	).innerText = `Seguidores ${user.seguidores}`;
 	document
 		.querySelector("body")
 		.setAttribute("style", "--themecolor: #" + user.corTema);
