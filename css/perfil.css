@@ -208,7 +208,7 @@ input {
 
 #pesquisa {
 	display: flex;
-	width: 60vw;
+	width: 100%;
 	background-color: rgb(50, 28, 96);
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -262,4 +262,34 @@ input {
 	background-color: transparent;
 	border: none;
 	width: 200%;
+}
+
+/*/  feed /*/
+
+#topbarFeed {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	background-color: rgb(50, 28, 96);
+	border-radius: 0px 0px 20px 20px;
+	padding-bottom: 10px;
+	margin-top: -20px;
+	box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
+	align-items: center;
+	justify-content: space-between;
+}
+
+#fotoFeed{
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	margin-left: 50px;
+}
+
+#botaoHeaderFeed{
+	margin-right: 50px;
+}
+
+#topbarFeed .botaoHeader{
+	margin-right: 50px;
 }
