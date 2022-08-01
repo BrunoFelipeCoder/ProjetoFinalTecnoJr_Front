@@ -116,7 +116,6 @@ window.onload = () => {
 };
 
 function like(codigo) {
-	window.preventDefault();
 	const like = {
 		like: 1,
 		codigoPost: codigo,
