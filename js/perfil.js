@@ -60,7 +60,7 @@ window.onload = () => {
 			.setAttribute("style", `--themecolor: #${user.corTema}`);
 		let cont = 0;
 		posts.forEach((post) => {
-			console.log(post);
+			let codigo = post.codigoPost;
 			if (!post.imagem.length) {
 				posteres.innerHTML += `
 				<div class="post">
@@ -99,7 +99,7 @@ window.onload = () => {
 					<p class="descricaoPost">${post.texto}</p>
 					<div class="wrapperIMG" id="post${++cont}"></div>
 					<div class="interacoes">
-						<button onclick="like(${post.codigoPost})"><i class="fa-solid fa-heart">${
+						<button on="like(${codigo})"><i class="fa-solid fa-heart">${
 					post.likes
 				}</i></button>
 						<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
