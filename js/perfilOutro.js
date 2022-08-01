@@ -42,8 +42,8 @@ request.onload = () => {
 						</div>
 						<p class="descricaoPost">${post.texto}</p>
 						<div class="interacoes">
-							<a onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></a>
-							<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
+						<a onclick="like(event)">${post.likes} <i class="fa-solid fa-heart"></i></a>
+						<a href="">${post.numeroComentarios} <i class=
 						</div>
 					</div>
 				</div>
@@ -64,8 +64,8 @@ request.onload = () => {
 					<p class="descricaoPost">${post.texto}</p>
 					<div class="wrapperIMG" id="post${++cont}"></div>
 					<div class="interacoes">
-						<a onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></a>
-						<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
+					<a onclick="like(event)">${post.likes} <i class="fa-solid fa-heart"></i></a>
+					<a href="">${post.numeroComentarios} <i class=
 					</div>
 				</div>
 			</div>

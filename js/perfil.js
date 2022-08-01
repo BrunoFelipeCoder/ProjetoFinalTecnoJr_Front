@@ -104,8 +104,8 @@ window.onload = () => {
 					<p class="descricaoPost">${post.texto}</p>
 					<div class="wrapperIMG" id="post${++cont}"></div>
 					<div class="interacoes">
-						<a onclick="like(event)">${post.likes} <i class="fa-solid fa-heart"></i></a>
-						<a href="">${post.numeroComentarios} <i class="fa-solid fa-comment"></i></a>
+					<a onclick="like(event)">${post.likes} <i class="fa-solid fa-heart"></i></a>
+					<a href="">${post.numeroComentarios} <i class=
 					</div>
 				</div>
 			</div>
