@@ -1,6 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userName = urlParams.get("userID");
 const myParam = { userName: userName };
+const posteres = document.querySelector("#feed");
 //let url = "http://localhost:3000/request/outroUsuario";
 let url = "https://ola-dev-backend.herokuapp.com/request/outroUsuario";
 let request = new XMLHttpRequest();
@@ -8,19 +9,73 @@ request.open("POST", url, true);
 request.setRequestHeader("Content-Type", "application/json");
 request.send(JSON.stringify(myParam));
 request.onload = () => {
-	user = JSON.parse(request.response);
+	let { user, posts } = JSON.parse(request.response);
 	document.querySelector("#nome").innerText = user.nome;
 	document.querySelector("#usuario").innerText = `@${user.nomeUsuario}`;
 	document.querySelector("#sobre").innerText = user.sobreMim;
 	document.querySelector("#header").src = user.imgBanner;
 	document.querySelector("#foto").src = user.imgPerfil;
-	document.querySelector("#seguindo").innerText = `Seguindo ${user.seguindo}`;
+	document.querySelector(
+		"#seguindo"
+	).innerText = `Seguindo ${user.seguindo.length}`;
 	document.querySelector(
 		"#seguidores"
-	).innerText = `Seguidores ${user.seguidores}`;
+	).innerText = `Seguidores ${user.seguidores.length}`;
 	document
 		.querySelector("body")
 		.setAttribute("style", "--themecolor: #" + user.corTema);
+	let cont = 0;
+	posts.forEach((post) => {
+		if (!post.imagem.length) {
+			posteres.innerHTML += `
+				<div class="post">
+					<div class="conteudoPost">
+						<div class="topoPost">
+							<img
+								class="fotoMini"
+								src="${user.imgPerfil}"
+								alt=""
+							/>
+							<p class="nomePost"><a href="">${user.nome}</a></p>
+							<p class="usuarioPost"><a href="">@${user.nomeUsuario}</a></p>
+
+						</div>
+						<p class="descricaoPost">${post.texto}</p>
+						<div class="interacoes">
+							<a onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></a>
+							<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
+						</div>
+					</div>
+				</div>
+			`;
+		} else {
+			posteres.innerHTML += `
+			<div class="post">
+				<div class="conteudoPost">
+					<div class="topoPost">
+						<img
+							class="fotoMini"
+							src="${user.imgPerfil}"
+							alt=""
+						/>
+						<p class="nomePost"><a href="">${user.nome}</a></p>
+						<p class="usuarioPost"><a href="">@${user.nomeUsuario}</a></p>
+					</div>
+					<p class="descricaoPost">${post.texto}</p>
+					<div class="wrapperIMG" id="post${++cont}"></div>
+					<div class="interacoes">
+						<a onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></a>
+						<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
+					</div>
+				</div>
+			</div>
+		`;
+			post.imagem.forEach((imgLink) => {
+				let teste = document.querySelector(`#post${cont}`);
+				teste.innerHTML += `<img src="${imgLink}" class="midiaPost">`;
+			});
+		}
+	});
 };
 
 function buscar(e) {
