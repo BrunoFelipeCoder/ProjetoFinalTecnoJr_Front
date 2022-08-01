@@ -18,6 +18,7 @@
 				<div id="pesquisa">
 					<div id="campoBusca">
 						<i class="fa-solid fa-magnifying-glass"></i>
+						<div id="barraDeBusca">
 						<input
 							type="text"
 							name="Username"
@@ -26,6 +27,7 @@
 							onkeyup="buscar(this)"
 						/>
 						<section id="resultados"></section>
+					</div>
 					</div>
 				</div>
 				<img
@@ -60,12 +62,12 @@
 						<p id="seguidores">Seguidores 42</p>
 					</div>
 				</div>
+				
 				<div id="botoesTopbar">
-					<a href="">Postagens</a>
-					<a href="">Mídia</a>
-					<a href="">Curtidas</a>
-					<a href="./login.html">Logout</a>
+					<button class="botaoHeader"><a href="./criacaoPost.html" id="novoPost">Novo Post!</a></button>
+					<a href="./login.html" id="logout">Logout</a>
 				</div>
+				
 			</div>
 			<div id="feed"></div>
 		</div>
