@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userName = urlParams.get("userID");
-const myParam = { userName: userName }; 
+const myParam = { userName: userName };
 const posteres = document.querySelector("#feed");
 //let url = "http://localhost:3000/request/outroUsuario";
 let url = "https://ola-dev-backend.herokuapp.com/request/outroUsuario";
@@ -15,10 +15,12 @@ request.onload = () => {
 	document.querySelector("#sobre").innerText = user.sobreMim;
 	document.querySelector("#header").src = user.imgBanner;
 	document.querySelector("#foto").src = user.imgPerfil;
-	document.querySelector("#seguindo").innerText = `Seguindo ${user.seguindo}`;
+	document.querySelector(
+		"#seguindo"
+	).innerText = `Seguindo ${user.seguindo.length}`;
 	document.querySelector(
 		"#seguidores"
-	).innerText = `Seguidores ${user.seguidores}`;
+	).innerText = `Seguidores ${user.seguidores.length}`;
 	document
 		.querySelector("body")
 		.setAttribute("style", "--themecolor: #" + user.corTema);

@@ -55,6 +55,12 @@ window.onload = () => {
 		document.querySelector("#sobre").innerText = user.descricao;
 		document.querySelector("#header").src = user.imgBanner;
 		document.querySelector("#foto").src = user.imgPerfil;
+		document.querySelector(
+			"#seguindo"
+		).innerText = `Seguindo ${user.seguindo.length}`;
+		document.querySelector(
+			"#seguidores"
+		).innerText = `Seguidores ${user.seguidores.length}`;
 		document
 			.querySelector("body")
 			.setAttribute("style", `--themecolor: #${user.corTema}`);
