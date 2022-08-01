@@ -30,6 +30,10 @@ body {
 	gap: 20px;
 }
 
+input{
+	color: white;
+}
+
 #header {
 	height: 200px;
 	width: 100%;
@@ -57,14 +61,18 @@ body {
 }
 
 .botaoHeader {
+	display: flex;
 	background-color: black;
 	border-radius: 20px;
 	border: none;
 	color: white;
-	padding: 12px 25px 12px 25px;
 	background-color: #700b97;
 	box-shadow: 6px 7px 12px 1px rgba(0, 0, 0, 0.3);
 	opacity: 0.8;
+}
+
+.botaoHeader a{
+	padding: 12px 25px 12px 25px;
 }
 
 .botaoHeader:hover {
@@ -113,26 +121,32 @@ body {
 }
 
 #botoesTopbar {
-	overflow: hidden;
+	align-self: center;
 	display: flex;
 	flex-direction: row;
+	width: 90%;
 	justify-content: space-between;
-	width: 80%;
-	align-self: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
-#botoesTopbar a {
+#novoPost{
+	color: white;
+	text-decoration: none;
+}
+
+
+#logout{
 	text-decoration: none;
 	color: rgb(191, 148, 255);
 	border-bottom: 3px solid transparent;
+	align-self: center;
 }
 
-#botoesTopbar a:hover {
+#logout:hover {
 	border-bottom-color: #700b97;
 }
 
-#botoesTopbar a.active {
+#logout.active {
 	border-bottom-color: #700b97;
 }
 
@@ -196,9 +210,32 @@ body {
 
 #pesquisa {
 	display: flex;
+	width: 60vw;
 	background-color: rgb(50, 28, 96);
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+#barraDeBusca{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#resultados{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-top: 19px;
+	border-radius: 0px 0px 10px 10px;
+	background-color: rgb(50, 28, 96);
+
+}
+
+#resultados a{
+	text-decoration: none;
+	padding: 10px 10px 10px 10px;
+	color: #ffffff
 }
 
 .midiaPost {
@@ -224,8 +261,8 @@ body {
 }
 
 #campo_busca {
+	display: flex;
 	background-color: transparent;
 	border: none;
-	border-bottom: 3px black;
-	width: 60vw;
+	width: 200%;
 }
