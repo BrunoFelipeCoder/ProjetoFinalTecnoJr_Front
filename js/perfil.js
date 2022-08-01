@@ -99,9 +99,9 @@ window.onload = () => {
 					<p class="descricaoPost">${post.texto}</p>
 					<div class="wrapperIMG" id="post${++cont}"></div>
 					<div class="interacoes">
-						<button onclick="like(event, ${
+						<button onclick="like({event, ${
 							post.codigoPost
-						})"><i class="fa-solid fa-heart">${
+						}})"><i class="fa-solid fa-heart">${
 					post.likes
 				}</i></button>
 						<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
@@ -118,7 +118,7 @@ window.onload = () => {
 	};
 };
 
-function like(event, codigo) {
+function like({ event, codigo }) {
 	event.preventDefault();
 	const like = {
 		like: 1,
