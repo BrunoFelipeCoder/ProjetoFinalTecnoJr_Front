@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userName = urlParams.get("userID");
-const myParam = { userName: userName };
+const myParam = { userName: userName }; 
 const posteres = document.querySelector("#feed");
 //let url = "http://localhost:3000/request/outroUsuario";
 let url = "https://ola-dev-backend.herokuapp.com/request/outroUsuario";
