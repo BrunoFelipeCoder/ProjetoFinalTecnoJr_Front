@@ -62,7 +62,6 @@ input{
 
 .botaoHeader {
 	display: flex;
-	background-color: black;
 	border-radius: 20px;
 	border: none;
 	color: white;

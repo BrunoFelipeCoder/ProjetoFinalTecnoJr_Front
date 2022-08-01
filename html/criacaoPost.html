@@ -4,22 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Criação de Post | OlaDev!</title>
-    <link rel="stylesheet" href="../css/criacaoPost.css">
-    <link rel="shortcut icon" href="../img/gatoIcon.png" type="image/x-icon">
+    <title>Criação de Post | Ola Dev!</title>
+    <link rel="stylesheet" href="../css/criacaoPost.css" />
+    <link rel="shortcut icon" href="../img/gatoIcon.png" type="image/x-icon" />
   </head>
   <body>
-    <form action="">
-      <input type="url" name="imgPost" id="imgPost" />
-      <button onclick="salvarIMG(event)">Adicionar imagem</button>
-      <input
-        type="text"
-        name="descricaoPost"
-        id="descricaoPost"
-        placeholder="Escreva algo sobre o post..."
-      />
-      <button type="submit" onclick="postarPost(event)">Postar</button>
-    </form>
+    <div id="container">
+      <h1>Crie seu post!</h1>
+      <form action="">
+        <p>Mostre sua mídia!</p>
+        <div id="inputMidia">
+          <input
+            type="url"
+            name="imgPost"
+            id="imgPost"
+            placeholder="Coloque o endereço da sua imagem"
+          />
+          <button onclick="salvarIMG(event)">Adicionar imagem</button>
+        </div>
+        <p>O que você deseja falar?</p>
+        <input
+          type="text"
+          name="descricaoPost"
+          id="descricaoPost"
+          placeholder="Escreva algo sobre o post..."
+        />
+        <button id="postar" type="submit" onclick="postarPost(event)">
+          Postar
+        </button>
+      </form>
+      <a href="../html/perfil.html">Voltar</a>
+    </div>
     <script src="../js/criacaoPost.js"></script>
   </body>
 </html>

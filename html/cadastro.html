@@ -1,100 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/cadastro.css" />
-		<title>Cadastro | Olá Dev!</title>
-		<script
-			src="https://kit.fontawesome.com/048239d8b6.js"
-			crossorigin="anonymous"
-		></script>
-		<link
-			rel="shortcut icon"
-			href="../img/gatoIcon.png"
-			type="image/x-icon"
-		/>
-	</head>
-	<body>
-		<div id="backgroundCadastro">
-			<form action="" id="cadastro" onsubmit="cadastro(event)">
-				<h1>Cadastro</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <title>Cadastro | Olá Dev!</title>
+    <script
+      src="https://kit.fontawesome.com/048239d8b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="../img/gatoIcon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="backgroundCadastro">
+      <form action="" id="cadastro" onsubmit="cadastro(event)">
+        <h1>Cadastro</h1>
 
-				<p>Preencha os seguintes dados para criar sua conta:</p>
+        <p>Preencha os seguintes dados para criar sua conta:</p>
 
-				<label for="">Nome: </label>
-				<div id="nomeEspaco" class="espaco">
-					<div id="icone1" class="icone">
-						<i class="fa-solid fa-user"></i>
-					</div>
-					<input
-						type="text"
-						name="nome"
-						id="nome"
-						placeholder="Nome Completo"
-						required
-						class="form"
-					/>
-				</div>
-				<label for="">Data: </label>
-				<div id="dataEspaco" class="espaco">
-					<div id="icone2" class="icone">
-						<i class="fa-solid fa-calendar"></i>
-					</div>
-					<input
-						type="date"
-						name="dataNasc"
-						id="dataNasc"
-						required
-						class="form"
-					/>
-				</div>
-				<label for="">Nome de Usuário: </label>
-				<div id="dataEspaco" class="espaco">
-					<div id="icone4" class="icone">
-						<i class="fa-solid fa-at"></i>
-					</div>
-					<input
-						type="text"
-						name="usuario"
-						id="usuario"
-						placeholder="Usuário"
-						required
-						class="form"
-					/>
-				</div>
-				<label for="">Senha: </label>
-				<div id="dataEspaco" class="espaco">
-					<div id="icone5" class="icone">
-						<i class="fa-solid fa-lock"></i>
-					</div>
-					<input
-						type="password"
-						name="senha"
-						id="senha"
-						placeholder="Senha"
-						required
-						class="form"
-					/>
-				</div>
-				<label for="">Confirmação de Senha: </label>
-				<div id="dataEspaco" class="espaco">
-					<div id="icone6" class="icone">
-						<i class="fa-solid fa-lock"></i>
-					</div>
-					<input
-						type="password"
-						name="senha2"
-						id="senha2"
-						placeholder="Confirme a Senha"
-						required
-						class="form"
-					/>
-				</div>
-				<button type="submit">Finalizar</button>
-			</form>
-		</div>
-		<script src="../js/cadastro.js"></script>
-	</body>
+        <label for="">Nome: </label>
+        <div id="nomeEspaco" class="espaco">
+          <div id="icone1" class="icone">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Nome Completo"
+            required
+            class="form"
+          />
+        </div>
+        <label for="">Data: </label>
+        <div id="dataEspaco" class="espaco">
+          <div id="icone2" class="icone">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <input
+            type="date"
+            name="dataNasc"
+            id="dataNasc"
+            required
+            class="form"
+          />
+        </div>
+        <label for="">Nome de Usuário: </label>
+        <div id="dataEspaco" class="espaco">
+          <div id="icone4" class="icone">
+            <i class="fa-solid fa-at"></i>
+          </div>
+          <input
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Usuário"
+            required
+            class="form"
+          />
+        </div>
+        <label for="">Senha: </label>
+        <div id="dataEspaco" class="espaco">
+          <div id="icone5" class="icone">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Senha"
+            required
+            class="form"
+          />
+        </div>
+        <label for="">Confirmação de Senha: </label>
+        <div id="dataEspaco" class="espaco">
+          <div id="icone6" class="icone">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <input
+            type="password"
+            name="senha2"
+            id="senha2"
+            placeholder="Confirme a Senha"
+            required
+            class="form"
+          />
+        </div>
+        <button type="submit">Finalizar</button>
+      </form>
+    </div>
+    <script src="../js/cadastro.js"></script>
+  </body>
 </html>

@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Recuperação | Olá Dev!</title>
-		<link rel="stylesheet" href="../css/recuperSenha.css" />
-		<script
-			src="https://kit.fontawesome.com/048239d8b6.js"
-			crossorigin="anonymous"
-		></script>
-		<link
-			rel="shortcut icon"
-			href="../img/gatoIcon.png"
-			type="image/x-icon"
-		/>
-	</head>
-	<body>
-		<div id="senhaModal">
-			<div id="textoSuperior">
-				<h1>Recuperação de senha</h1>
-			</div>
-			<form onsubmit="mandarEmail(event)">
-				<p>Digite seu e-mail:</p>
-				<input
-					type="email"
-					placeholder="Informe seu email..."
-					id="emailSenha"
-				/>
-				<button type="submit">Enviar</button>
-			</form>
-			<a href="./login.html">Voltar ao Login</a>
-		</div>
-		<script src="../js/esqueciSenha.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperação | Olá Dev!</title>
+    <link rel="stylesheet" href="../css/recuperSenha.css" />
+    <script
+      src="https://kit.fontawesome.com/048239d8b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="../img/gatoIcon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="senhaModal">
+      <div id="textoSuperior">
+        <h1>Recuperação de senha</h1>
+      </div>
+      <form onsubmit="mandarEmail(event)">
+        <p>Digite seu e-mail:</p>
+        <input
+          type="email"
+          placeholder="Informe seu email..."
+          id="emailSenha"
+        />
+        <button type="submit">Enviar</button>
+      </form>
+      <a href="./login.html">Voltar ao Login</a>
+    </div>
+    <script src="../js/esqueciSenha.js"></script>
+  </body>
 </html>
