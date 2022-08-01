@@ -99,7 +99,11 @@ window.onload = () => {
 					<p class="descricaoPost">${post.texto}</p>
 					<div class="wrapperIMG" id="post${++cont}"></div>
 					<div class="interacoes">
-						<a href=""><i class="fa-solid fa-heart">${post.likes}</i></a>
+						<button onclick="like(event, ${
+							post.codigoPost
+						})"><i class="fa-solid fa-heart">${
+					post.likes
+				}</i></button>
 						<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
 					</div>
 				</div>
@@ -114,7 +118,20 @@ window.onload = () => {
 	};
 };
 
-function like(event) {
+function like(event, codigo) {
 	event.preventDefault();
-	console.log("teste");
+	const like = {
+		like: 1,
+		codigoPost: codigo,
+	};
+	console.log(codigo);
+	/*const url =
+		"https://ola-dev-backend.herokuapp.com/request/atualizarCorTema";
+	let request = new XMLHttpRequest();
+	request.open("POST", url, true);
+	request.setRequestHeader("Content-Type", "application/json");
+	request.send(JSON.stringify(like));
+	request.onload = () => {
+		alert(request.response);
+	};*/
 }
