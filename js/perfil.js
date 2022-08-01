@@ -63,7 +63,7 @@ window.onload = () => {
 		).innerText = `Seguidores ${user.seguidores.length}`;
 		document
 			.querySelector("body")
-			.setAttribute("style", `--themecolor: #${user.corTema}`);
+			.setAttribute("style", `--themecolor: #${user.corTema}`); 
 		let cont = 0;
 		posts.forEach((post) => {
 			if (!post.imagem.length) {

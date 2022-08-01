@@ -30,7 +30,7 @@ body {
 	gap: 20px;
 }
 
-input{
+input {
 	color: white;
 }
 
@@ -70,7 +70,7 @@ input{
 	opacity: 0.8;
 }
 
-.botaoHeader a{
+.botaoHeader a {
 	padding: 12px 25px 12px 25px;
 }
 
@@ -128,13 +128,12 @@ input{
 	margin-bottom: 15px;
 }
 
-#novoPost{
+#novoPost {
 	color: white;
 	text-decoration: none;
 }
 
-
-#logout{
+#logout {
 	text-decoration: none;
 	color: rgb(191, 148, 255);
 	border-bottom: 3px solid transparent;
@@ -165,8 +164,8 @@ input{
 	text-decoration: none;
 }
 
-.post .usuarioPost a{
-	color:rgba(153, 153, 153, 0.685);
+.post .usuarioPost a {
+	color: rgba(153, 153, 153, 0.685);
 }
 
 .topoPost {
@@ -215,26 +214,25 @@ input{
 	padding-bottom: 15px;
 }
 
-#barraDeBusca{
+#barraDeBusca {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-#resultados{
+#resultados {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 	margin-top: 19px;
 	border-radius: 0px 0px 10px 10px;
 	background-color: rgb(50, 28, 96);
-
 }
 
-#resultados a{
+#resultados a {
 	text-decoration: none;
 	padding: 10px 10px 10px 10px;
-	color: #ffffff
+	color: #ffffff;
 }
 
 .midiaPost {
