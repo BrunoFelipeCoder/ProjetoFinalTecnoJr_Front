@@ -76,7 +76,7 @@ window.onload = () => {
 						</div>
 						<p class="descricaoPost">${post.texto}</p>
 						<div class="interacoes">
-							<button onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></button>
+							<a onclick="like(event)"><i class="fa-solid fa-heart">${post.likes}</i></a>
 							<a href=""><i class="fa-solid fa-comment">${post.numeroComentarios}</i></a>
 						</div>
 					</div>
