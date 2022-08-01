@@ -9,7 +9,7 @@
 body {
 	display: flex;
 	font-family: "Inter", sans-serif;
-	background-color: var(--themecolor);
+	background-color: var(--theme);
 	color: white;
 	justify-content: center;
 }
